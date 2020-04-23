@@ -1,0 +1,36 @@
+.abt-me-lg-icn{
+    font-size: 45px;
+    margin-left: -14px;
+    color: white;
+}
+.abt-me-mn-dv{
+    text-align: center;
+    color: #ffffffe0;
+    padding-top: 30px;
+}
+.hm-rw-2{
+    margin: 0% !important;
+    padding: 10px;
+    padding-top: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.abt-icn-mn-dv{
+    width: 50%;
+    margin: auto;
+    padding: 26px;
+    &:hover{
+    background: #d98404;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+}
+.btn-cstm-cls{
+    background: #d98404;
+    width: 80px;
+    border: 0px;
+    &:hover{
+        background: #d98406;
+        height: 30px;
+    }
+}
