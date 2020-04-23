@@ -3,7 +3,7 @@ import { HeaderProps } from './interface';
 import logo from '../../assets/logo.png'
 import './style.css';
 
-const Header: React.StatelessComponent<HeaderProps> = (props): JSX.Element => {
+const Header: React.FC<HeaderProps> = (props): JSX.Element => {
 
     return <nav className="navbar navbar-expand-lg navbar-dark hdr-cstm-mn-dv">
         <div className="nv-bdy">

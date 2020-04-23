@@ -1,4 +1,8 @@
 import React from 'react';
+import Scene1 from '../../assets/s1.jpg';
+import Scene2 from '../../assets/s2.jpg';
+import Scene3 from '../../assets/s3.jpg';
+import Scene4 from '../../assets/s4.jpg';
 import './style.scss'
 
 const P_Slider = () => {
@@ -13,17 +17,21 @@ const P_Slider = () => {
       <li data-target="#demo" data-slide-to="0" className="active"></li>
       <li data-target="#demo" data-slide-to="1"></li>
       <li data-target="#demo" data-slide-to="2"></li>
+      <li data-target="#demo" data-slide-to="3"></li>
     </ul>
 
     <div className="carousel-inner crsl-itm">
       <div className="carousel-item active">
-        <img className="crsl-itm-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Los_Angeles_with_Mount_Baldy.jpg/270px-Los_Angeles_with_Mount_Baldy.jpg" alt="Los Angeles" />
+        <img className="crsl-itm-img" src={Scene1} alt="Dhussi, Mianwali, Punjab" draggable={false} />
       </div>
       <div className="carousel-item">
-        <img className="crsl-itm-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Los_Angeles_with_Mount_Baldy.jpg/270px-Los_Angeles_with_Mount_Baldy.jpg" alt="Chicago" />
+        <img className="crsl-itm-img" src={Scene2} alt="Dhussi, Mianwali, Punjab" draggable={false} />
       </div>
       <div className="carousel-item">
-        <img className="crsl-itm-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Los_Angeles_with_Mount_Baldy.jpg/270px-Los_Angeles_with_Mount_Baldy.jpg" alt="New York" />
+        <img className="crsl-itm-img" src={Scene3} alt="Dhussi, Mianwali, Punjab" draggable={false} />
+      </div>
+      <div className="carousel-item">
+        <img className="crsl-itm-img" src={Scene4} alt="Dhussi, Mianwali, Punjab" draggable={false} />
       </div>
     </div>
 
