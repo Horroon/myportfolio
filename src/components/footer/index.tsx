@@ -8,18 +8,19 @@ import './style.scss'
 const Items: Array<itemFace> = [
     {
         iconClass: 'fa fa-map-marker',
+        title: 'Abode',
+        desc: `<a class=address-link href=https://www.mtbc.com target=_black>Medical Transcripting & Billing Company</a> 6th Road, Rawalpindi, Pakistan`
+    },
+    {
+        iconClass: 'fa fa-globe',
         title: 'Venue',
         desc: `My base is at an indoor venue in Dhussi, and I took it outdoors in late august 2015`
     },
     {
-        iconClass: 'fa fa-globe',
-        title: 'Work Place',
-        desc: `<a class=address-link href=https://www.mtbc.com target=_black>Medical Transcripting & Billing Company</a> 6th Road, Rawalpindi, Pakistan`
-    },
-    {
         iconClass: 'fa fa-cogs',
         title: 'Milieu',
-        desc: `Comfortable,restful and pleasent environment always keeps unfault and fit.`},
+        desc: `Comfortable,restful and pleasent environment always keeps fit.`
+    },
     {
         iconClass: 'fa fa-share-alt',
         title: 'Follow On',
