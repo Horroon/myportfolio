@@ -13,13 +13,21 @@
     text-align: end;
 }
 .hdr-lst-itm{
-    width: 10%;
+    width: 100px
 }
 .ui-item-dv{
     width: 100%;
     justify-content: space-evenly;
     text-align: start;
     padding-left: 20px;
+}
+.marqueeStyle{
+    color: #ffffffe0;
+    font-size: 14px;
+}
+.marq-parent-dv{
+    padding-left: 5%;
+    padding-right: 5%;
 }
 .brnd-txt-size{
     font-size: 20px;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {itemFace} from './interface'
+import { itemFace } from './interface'
 import GiveColumn from './itemColumn'
 import './style.scss'
 
@@ -8,24 +8,34 @@ import './style.scss'
 const Items: Array<itemFace> = [
     {
         iconClass: 'fa fa-map-marker',
-        title: 'Footer Icon Title',
-        desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry
-     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`},
+        title: 'Venue',
+        desc: `My base is at an indoor venue in Dhussi, and I took it outdoors in late august 2015`
+    },
     {
         iconClass: 'fa fa-globe',
-        title: 'Footer Icon Title',
-        desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`},
+        title: 'Work Place',
+        desc: `<a class=address-link href=https://www.mtbc.com target=_black>Medical Transcripting & Billing Company</a> 6th Road, Rawalpindi, Pakistan`
+    },
     {
         iconClass: 'fa fa-cogs',
-        title: 'Footer Icon Title',
-        desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry
-       Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`},
+        title: 'Milieu',
+        desc: `Comfortable,restful and pleasent environment always keeps unfault and fit.`},
     {
         iconClass: 'fa fa-share-alt',
-        title: 'Footer Icon Title',
-        desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`},
+        title: 'Follow On',
+        desc: `
+        <div class="ftr-social-icon-tab">
+            <div class=accnticn-dv>
+                <a href=https://web.facebook.com/haroonrasheed.valient class="fa fa-facebook" target=_black></a>
+            </div>
+            <div class=accnticn-dv>
+                <a href=https://twitter.com/Horroon class="fa fa-twitter" target=_black> </a>
+            </div>
+            <div class=accnticn-dv>
+                <a href=https://web.facebook.com/haroonrasheed.valient class="fa fa-instagram" target=_black></a> 
+            </div> 
+        </div>`},
+
 ]
 
 
@@ -35,8 +45,8 @@ const Footer: React.FC = (): JSX.Element => {
         <div className="row ftr-rw-1">
             {Items.map(item => <GiveColumn iconClass={item.iconClass} title={item.title} desc={item.desc} />)}
         </div>
-        <div className="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+        <div className="footer-copyright text-center py-3">© 2020:
+        <a className="address-link" href="#"> Haroon Rasheed</a>
         </div>
     </footer >
 }

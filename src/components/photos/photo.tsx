@@ -22,7 +22,7 @@ const Photo: React.FC = (): JSX.Element => {
         {photos.map((item) => {
             return <div className="col-lg-3 phto-itm-1 phto-itm">
                 <div className="photo-img-dv">
-                    <img src={item.img} className="pic-dv" />
+                    <img src={item.img} className="pic-dv" draggable={false} />
                 </div>
                 <div>
                     <p>{item.desc}</p>

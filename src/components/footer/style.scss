@@ -12,9 +12,19 @@
     color: white;
 
 }
+
+.ftr-social-icon-tab{
+    display: flex; 
+    justify-content: center
+}
+
 .ftr-titl-cls{
     font-size: 20px;
     margin-left: 10px;
+    text-transform: uppercase;
+}
+.address-link{
+    color: #d98404 !important;
 }
 .ftr-pr-dv{
     width: 80%;

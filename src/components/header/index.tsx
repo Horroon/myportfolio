@@ -10,6 +10,7 @@ const Header: React.FC<HeaderProps> = (props): JSX.Element => {
             <div className="nv-brnd-dv">
                 <a className="navbar-brand brnd-txt-size" href="#"><img src={logo} className="hdr-lgo" /> Software Engineer</a>
             </div>
+            <div className="marq-parent-dv" dangerouslySetInnerHTML={{__html:`<marquee class=marqueeStyle>${props.news}</marquee>`}}></div>
             <div className="nv-uitm-dv">
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

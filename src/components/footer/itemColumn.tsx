@@ -6,8 +6,9 @@ const GiveColumn: React.FC<itemFace> = (props): JSX.Element => {
         <div>
             <i className={`${props.iconClass} ftr-icn-cls`} />
             <span className="ftr-titl-cls">{props.title}</span>
-            <div className="ftr-pr-dv">
-                <p>{props.desc}</p>
+            <div className="ftr-pr-dv" dangerouslySetInnerHTML={{
+                __html: `<p>${props.desc}</p>`
+            }}>
             </div>
         </div>
     </div>
