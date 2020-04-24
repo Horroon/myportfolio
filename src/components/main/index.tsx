@@ -3,12 +3,25 @@ import Header from '../header/index';
 import Home from '../home/index';
 import MainUsersFile from '../firebase_practice/user/main'
 import Footer from '../footer/index';
-const Main = () => {
-    return <div style={{ background: '#151515' }}>
-        <Header news={"Haroon working at MTBC since 18 Feb, 2020"} uicomponents={['Home', 'Services', 'Contact', 'FAQ']} />
-        <Home />
-        <Footer />
-    </div>
-}
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
-export default Main
+const RouterComponent = () => {
+    return (
+        <Router>
+            <div style={{ background: '#151515' }}>
+                <Header news={"I've been working at MTBC since 18 Feb, 2020"} uicomponents={['Home', 'Services', 'Contact', 'FAQ']} />
+                <Switch>
+                    <Route path="/">
+                        <Home />
+                    </Route>
+                </Switch>
+                <Footer />
+            </div>
+        </Router>)
+}
+export default RouterComponent

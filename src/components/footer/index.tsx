@@ -33,7 +33,7 @@ const Items: Array<itemFace> = [
                 <a href=https://twitter.com/Horroon class="fa fa-twitter" target=_black> </a>
             </div>
             <div class=accnticn-dv>
-                <a href=https://web.facebook.com/haroonrasheed.valient class="fa fa-instagram" target=_black></a> 
+                <a href=https://www.instagram.com/horroona/ class="fa fa-instagram" target=_black></a> 
             </div> 
         </div>`},
 

@@ -23,7 +23,7 @@ const AcountDiv = (): JSX.Element => {
                     <a href={"https://twitter.com/Horroon"} className="fa fa-twitter" target="_black" />
                 </div>
                 <div className="accnticn-dv">
-                    <a href={"https://web.facebook.com/haroonrasheed.valient"} className="fa fa-instagram" target="_black" />
+                    <a href={"https://www.instagram.com/horroona/"} className="fa fa-instagram" target="_black" />
                 </div>
             </div>
         </div>
