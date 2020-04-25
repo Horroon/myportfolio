@@ -58,7 +58,7 @@
 }
 
 .til-img{
-    height: inherit;
+    height: 280px;
     width: 100%;
     border-radius: 10px;
     &:hover{
@@ -69,3 +69,23 @@
 .rw-cntr-fvrt{
     padding: 10px;
 }
+.scrollmenu {
+    white-space: nowrap;
+  }
+  
+  .scrollmenu .til-prnt-cntr {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  .scrl-dv-icn{
+      margin: auto;
+      color: white;
+      z-index: 1;
+      cursor: pointer;
+      &:hover{
+          color: #d98404;
+          font-size: 30px;
+      }
+  }

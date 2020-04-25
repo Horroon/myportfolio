@@ -12,17 +12,22 @@ interface ColumnFace {
     title: string
 }
 
-const Books: Array<ColumnFace> = [{ title: "Life Of Muhammad(S.W.A)", img: LMB }, { title: "Life Of Muhammad(S.W.A)", img: LMB }, { title: "Life Of Muhammad(S.W.A)", img: LMB }, { title: "Life Of Muhammad(S.W.A)", img: LMB }, { title: "Book", img: LMB }, { title: "Book", img: LMB }]
-const Games: Array<ColumnFace> = [{ title: "Best Game", img: G1 }, { title: "Super Hero", img: SuperHero }, { title: "Fun Game", img: Fun },{ title: "Best Game", img: G1 }, { title: "Super Hero", img: SuperHero }, { title: "Fun Game", img: Fun },]
-const Movies: Array<ColumnFace> = [{ title: "Fantasy Movie", img: Fantasy }, { title: "Super Hero", img: SuperHero }, { title: "Fun Game", img: Fun },{ title: "Fun Game", img: Fun },{ title: "Fun Game", img: Fun },{ title: "Fun Game", img: Fun }]
+interface RowFace {
+    MainTitle: string,
+    BigObject: Array<ColumnFace>,
+}
+
+const Books: Array<ColumnFace> = [{ title: "Life Of Muhammad(S.W.A)", img: LMB }, { title: "Life Of Muhammad(S.W.A)", img: LMB }, { title: "Life Of Muhammad(S.W.A)", img: LMB }, { title: "Life Of Muhammad(S.W.A)", img: LMB }, { title: "Book", img: LMB }, { title: "Book", img: LMB }, { title: "Book", img: LMB }, { title: "Book", img: LMB }]
+const Games: Array<ColumnFace> = [{ title: "Best Game", img: G1 }, { title: "Super Hero", img: SuperHero }, { title: "Fun Game", img: Fun }, { title: "Best Game", img: G1 }, { title: "Super Hero", img: SuperHero }, { title: "Fun Game", img: Fun },]
+const Movies: Array<ColumnFace> = [{ title: "Fantasy Movie", img: Fantasy }, { title: "Super Hero", img: SuperHero }, { title: "Fun Game", img: Fun }, { title: "Fun Game", img: Fun }, { title: "Fun Game", img: Fun }, { title: "Fun Game", img: Fun }, { title: "Fantasy Movie", img: Fantasy }, { title: "Super Hero", img: SuperHero }, { title: "Fun Game", img: Fun }, { title: "Fun Game", img: Fun }, { title: "Fun Game", img: Fun }, { title: "Fun Game", img: Fun }]
+
+const MainItems: Array<RowFace> = [{ BigObject: Books, MainTitle: "Favorite Books" }, { BigObject: Movies, MainTitle: "Favorite Movies" }, { BigObject: Games, MainTitle: "Favorite Games" }]
+
 const Favourite = () => {
     return <div className="fvrt-bdy-dv">
-        <TilesRow mainTitle="Favorite Books" items={Books} />
-
-        <TilesRow mainTitle="Favorite Movies" items={Movies} />
-
-        <TilesRow mainTitle="Favorite Games" items={Games} />
-
+        {
+            MainItems.map((Item,i) =><TilesRow mainTitle={Item.MainTitle} items={Item.BigObject} key={i} id={i}/>)
+        }
     </div>
 }
 
