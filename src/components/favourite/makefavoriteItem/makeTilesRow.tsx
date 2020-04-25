@@ -41,13 +41,13 @@ const TilesRow: React.FC<TilesRowFace> = (props): JSX.Element => {
         // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         let ScrollMenu = document.getElementById(`scroll${props.id}`)
         scroll -= 20;
+        setScroll(scroll)
         if (ScrollMenu) {
             if (ScrollMenu.clientWidth < ScrollMenu.scrollWidth) {
                 if (scrollFullWidth < ScrollMenu.scrollWidth) {
                     ScrollMenu.style.transform = "translateX(" + scroll + "px" + ")";
                     ScrollMenu.style.transition = "0.5s"
                     setScrollFullWidth(scrollFullWidth + 20)
-                    setScroll(scroll)
 
                 }
             }
