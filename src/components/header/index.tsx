@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import { HeaderProps } from './interface';
 import logo from '../../assets/logo.png'
 import './style.css';
@@ -8,7 +9,7 @@ const Header: React.FC<HeaderProps> = (props): JSX.Element => {
     return <nav className="navbar navbar-expand-lg navbar-dark hdr-cstm-mn-dv">
         <div className="nv-bdy">
             <div className="nv-brnd-dv">
-                <a className="navbar-brand brnd-txt-size" href="#"><img src={logo} className="hdr-lgo" /> Software Engineer</a>
+                <Link className="navbar-brand brnd-txt-size" to="/"><img src={logo} className="hdr-lgo" /> Software Engineer</Link>
             </div>
             <div className="marq-parent-dv" dangerouslySetInnerHTML={{__html:`<marquee class=marqueeStyle>${props.news}</marquee>`}}></div>
             <div className="nv-uitm-dv">
@@ -20,7 +21,7 @@ const Header: React.FC<HeaderProps> = (props): JSX.Element => {
                     <ul className="navbar-nav mr-auto ul-dv ui-item-dv">
                         {
                             props.uicomponents.map((item, index) => <li className="nav-item hvr-cls hdr-lst-itm" key={index}>
-                                <a className="nav-link hdr-cstm-dv" href="#">{item}</a>
+                                <Link className="nav-link hdr-cstm-dv" to="/">{item}</Link>
                             </li>)
                         }
                     </ul>
