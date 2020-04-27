@@ -5,6 +5,7 @@ import Home from '../home/index';
 import MainUsersFile from '../firebase_practice/user/main'
 import Footer from '../footer/index';
 import Favourite from '../favourite/index';
+import Profile from '../profile/index';
 
 import {
     BrowserRouter as Router,
@@ -24,6 +25,9 @@ const RouterComponent = () => {
                     </Route>
                     <Route path="/favorite" exact>
                         <Favourite />
+                    </Route>
+                    <Route path="/myprofile" exact>
+                        <Profile />
                     </Route>
                 </Switch>
                 <Footer />
