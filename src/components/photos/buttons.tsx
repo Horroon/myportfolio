@@ -1,11 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+
+interface buttonFace {
+    link: string,
+    text: string
+}
+
+const buttons: Array<buttonFace> = [{ link: "/", text: "Home" }, { link: "/myprofile", text: "Profile" }, { link: "/favorite", text: "Favorite" }]; //{ link: "/services", text: "Services" }
+
 const Buttons = (): JSX.Element => {
     return <div className="col-lg-12 btn-mn-dv">
-        <button type="button" className="btn btn-secondary btn-sctm-style"><Link to="/" className="rmw-dflt-lnk-prpty">Home</Link></button>
-        <button type="button" className="btn btn-secondary btn-sctm-style"><Link to="/myprofile" className="rmw-dflt-lnk-prpty">Profile</Link></button>
-        <button type="button" className="btn btn-secondary btn-sctm-style" ><Link to="/favorite" className="rmw-dflt-lnk-prpty">Favorites</Link></button>
-        <button type="button" className="btn btn-secondary btn-sctm-style">Services</button>
+        {
+            buttons.map((button, i) => <Link to={button.link} className="rmw-dflt-lnk-prpty" key={i}><button type="button" className="btn btn-secondary btn-sctm-style">{button.text}</button></Link>)
+        }
     </div>
 }
 

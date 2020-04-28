@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = (props): JSX.Element => {
                     <ul className="navbar-nav mr-auto ul-dv ui-item-dv">
                         {
                             props.uicomponents.map((item, index) => <li className="nav-item hvr-cls hdr-lst-itm" key={index}>
-                                <Link className="nav-link hdr-cstm-dv" to="/">{item}</Link>
+                                <Link className="nav-link hdr-cstm-dv" to={item.link}>{item.text}</Link>
                             </li>)
                         }
                     </ul>

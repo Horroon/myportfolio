@@ -5,7 +5,6 @@ const Address: React.FC = (): JSX.Element => {
         <div className="adrs-ttl-prnt-dv"><h3>Address</h3></div>
         <div>
             <p>
-                Street Number 8,
                 Sadiqabad,Block A Satellite
             Town Rawalpindi, Punjab</p>
         </div>

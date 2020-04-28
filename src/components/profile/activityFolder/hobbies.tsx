@@ -17,7 +17,7 @@ const ActivityItem: React.FC<ItemFace> = (props) => {
     </div>
 }
 
-const HobbiesList: Array<ItemFace> = [{ icon: "fa fa-pencil", text: "writing" }, { icon: "fa fa-male", text: "walking" }, { icon: "fa fa-car", text: "visiting" }, { icon: "fa fa-book", text: "reading" },]
+const HobbiesList: Array<ItemFace> = [{ icon: "fa fa-pencil", text: "writing" }, { icon: "fa fa-male", text: "walking" }, { icon: "fa fa-car", text: "visiting" }, { icon: "fa fa-book", text: "reading" }, { icon: "fa fa-film", text: "movies" },{ icon: "fa fa-gamepad", text: "Indoor games" },]
 const Hobbies = () => {
     return <div>
         <div className="hb-tl-dv">

@@ -4,7 +4,6 @@ import { LanguageFace, tableFace } from './interfaces'
 import TableRow from './givetableRow';
 
 import './style.scss';
-
 const TableValues: Array<tableFace> = [{ head: { c1: "Position", c2: "Experience" }, value: { c1: "Software Engineer", c2: "1.5" } },
 { head: { c1: "Nationality", c2: "Website" }, value: { c1: "Pakistani", c2: "Pending" } },
 {
@@ -18,9 +17,10 @@ const TableValues: Array<tableFace> = [{ head: { c1: "Position", c2: "Experience
 },
 ]
 
-const Languages: Array<LanguageFace> = [{ lName: "JavaScript", progress: 80 }, { lName: "Java", progress: 40 }, { lName: "Reactjs", progress: 70 }, { lName: "React Native", progress: 65 }, { lName: "GraphQL", progress: 75 }, { lName: "Apollo Client", progress: 60 }, { lName: "TypeScript", progress: 50 }, { lName: "Flutter", progress: 40 }]
+const Languages: Array<LanguageFace> = [{ lName: "JavaScript", progress: 80 }, { lName: "Java", progress: 40 }, { lName: "Reactjs", progress: 70 }, { lName: "React Native", progress: 65 }, { lName: "GraphQL", progress: 75 }, { lName: "Apollo Client", progress: 70 }, { lName: "Prisma Api", progress: 70 }, { lName: "TypeScript", progress: 50 }, { lName: "Flutter", progress: 40 }]
 
 const Main: React.FC = (): JSX.Element => {
+
     return <div className="skl-prnt-dv">
         <div>
             <h3>Skills</h3>
@@ -35,10 +35,10 @@ const Main: React.FC = (): JSX.Element => {
                 <div className="col-lg-5">
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                         <div>
-                            <button className="btn"><i className="fa fa-home" />Follow Me</button>
+                            <button className="btn"><i className="fa fa-share-alt" />Follow Me</button>
                         </div>
                         <div>
-                            <button className="btn"><i className="fa fa-home" />Download Resume</button>
+                            <button className="btn"><i className="fa fa-download" />Download Resume</button>
                         </div>
                     </div>
                 </div>

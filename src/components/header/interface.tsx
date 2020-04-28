@@ -1,4 +1,9 @@
 export interface HeaderProps {
-    uicomponents: Array<string>,
-    news:string
+    uicomponents: Array<uicomponentsFace>,
+    news: string
+}
+
+interface uicomponentsFace {
+    text: string,
+    link: string
 }

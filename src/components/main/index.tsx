@@ -18,7 +18,7 @@ const RouterComponent = () => {
     return (
         <Router>
             <div style={{ background: '#151515' }}>
-                <Header news={"I have been working at MTBC since 18 Feb, 2020"} uicomponents={['Home', 'Services', 'Contact', 'FAQ']} />
+                <Header news={"Working at MTBC since 18 Feb, 2020"} uicomponents={[{ link: '/', text: 'Home' }, { link: '/favorite', text: 'Favorite' }, { link: '/contact', text: 'Contact' }, { link: '/faq', text: 'FAQ' }]} />
                 <Switch>
                     <Route path="/" exact >
                         <Home />
