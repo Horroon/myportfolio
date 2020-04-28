@@ -6,7 +6,7 @@ const Item: React.FC<ItemFace> = (props): JSX.Element => {
 
     return <div className="col-lg-3 abt-me-mn-dv">
         <div>
-            <h4>{props.title}</h4>
+            <h4 className="uppercase">{props.title}</h4>
         </div>
         <div className="abt-icn-mn-dv">
             <i className={`${props.iconClass} abt-me-lg-icn`} />

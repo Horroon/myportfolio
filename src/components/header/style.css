@@ -60,3 +60,7 @@
 .nv-brnd-dv{
     padding-left: 10px;
 }
+
+.uppercase{
+    text-transform: uppercase;
+}
