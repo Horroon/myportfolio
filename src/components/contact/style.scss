@@ -1,0 +1,25 @@
+.inpt-field-dv{
+    border: 0px;
+    border-bottom: 1px solid;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    &:focus{
+        border: white;
+    }
+}
+.inpt-lbl{
+    margin-bottom: 0px;
+   
+}
+
+.frm-pdng{
+    padding: 27px;
+    padding-top: 15px;
+}
+
+.btn-clm{
+    text-align: center;
+}
+.main-titl-dv{
+    text-align: center;
+}

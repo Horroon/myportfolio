@@ -7,6 +7,7 @@ import Footer from '../footer/index';
 import Favourite from '../favourite/index';
 import Profile from '../profile/index';
 import Gallery from '../gallery/index';
+import Contact from '../contact/index';
 
 import {
     BrowserRouter as Router,
@@ -19,7 +20,7 @@ const RouterComponent = () => {
     return (
         <Router>
             <div style={{ background: '#151515' }}>
-                <Header news={"Working At MTBC Since 18 Feb, 2020"} uicomponents={[{ link: '/', text: 'Home' }, { link: '/favorite', text: 'Favorite' }, { link: '/contact', text: 'Contact' }, { link: '/faq', text: 'FAQ' }]} />
+                <Header news={"Working At MTBC Since 18 Feb, 2020"} uicomponents={[{ link: '/', text: 'Home' }, { link: '/favorite', text: 'Favorite' }, { link: '/contactme', text: 'Contact' }, { link: '/faq', text: 'FAQ' }]} />
                 <Switch>
                     <Route path="/" exact >
                         <Home />
@@ -32,6 +33,9 @@ const RouterComponent = () => {
                     </Route>
                     <Route path="/gallery" exact>
                         <Gallery />
+                    </Route>
+                    <Route path="/contactme" exact>
+                        <Contact />
                     </Route>
                 </Switch>
                 <Footer />
