@@ -1,5 +1,6 @@
 export interface ItemFace {
     title: string,
     iconClass: string,
-    desc: string
+    desc: string,
+    pathurl:string
 }

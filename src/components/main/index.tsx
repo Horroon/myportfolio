@@ -6,6 +6,7 @@ import MainUsersFile from '../firebase_practice/user/main'
 import Footer from '../footer/index';
 import Favourite from '../favourite/index';
 import Profile from '../profile/index';
+import Gallery from '../gallery/index';
 
 import {
     BrowserRouter as Router,
@@ -28,6 +29,9 @@ const RouterComponent = () => {
                     </Route>
                     <Route path="/myprofile" exact>
                         <Profile />
+                    </Route>
+                    <Route path="/gallery" exact>
+                        <Gallery />
                     </Route>
                 </Switch>
                 <Footer />

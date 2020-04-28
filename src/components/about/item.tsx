@@ -1,5 +1,6 @@
 import React from 'react';
-import { ItemFace } from './interface'
+import { ItemFace } from './interface';
+import { Link } from 'react-router-dom'
 
 
 const Item: React.FC<ItemFace> = (props): JSX.Element => {
@@ -9,7 +10,9 @@ const Item: React.FC<ItemFace> = (props): JSX.Element => {
             <h4 className="uppercase">{props.title}</h4>
         </div>
         <div className="abt-icn-mn-dv">
-            <i className={`${props.iconClass} abt-me-lg-icn`} />
+            <Link to={props.pathurl} className="rmw-dflt-lnk-prpty">
+                <i className={`${props.iconClass} abt-me-lg-icn`} />
+            </Link>
         </div>
         <div>
             <p>
@@ -17,7 +20,9 @@ const Item: React.FC<ItemFace> = (props): JSX.Element => {
             </p>
         </div>
         <div>
-            <button className="btn btn-primary btn-cstm-cls">View</button>
+            <Link to={props.pathurl} className="rmw-dflt-lnk-prpty">
+                <button className="btn btn-primary btn-cstm-cls">View</button>
+            </Link>
         </div>
     </div>
 }
