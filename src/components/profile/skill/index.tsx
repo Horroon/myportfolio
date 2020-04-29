@@ -2,6 +2,7 @@ import React from 'react';
 import Language from './language';
 import { LanguageFace, tableFace } from './interfaces'
 import TableRow from './givetableRow';
+import { Link } from 'react-router-dom'
 
 import './style.scss';
 const TableValues: Array<tableFace> = [{ head: { c1: "Position", c2: "Experience" }, value: { c1: "Software Engineer", c2: "1.5" } },
@@ -18,6 +19,18 @@ const TableValues: Array<tableFace> = [{ head: { c1: "Position", c2: "Experience
 ]
 
 const Languages: Array<LanguageFace> = [{ lName: "JavaScript", progress: 80 }, { lName: "Java", progress: 40 }, { lName: "Reactjs", progress: 70 }, { lName: "React Native", progress: 65 }, { lName: "GraphQL", progress: 75 }, { lName: "Apollo Client", progress: 70 }, { lName: "Prisma Api", progress: 70 }, { lName: "TypeScript", progress: 50 }, { lName: "Flutter", progress: 40 }]
+
+interface LinkFace {
+    icon: string,
+    link: string
+}
+const SocialButton: React.FC<LinkFace> = (props): JSX.Element => {
+    return <div>
+        <a href={props.link} target="__black"> <i className={`fa fa-${props.icon}`} /></a>
+    </div>
+}
+
+const SocialButtonsList: Array<LinkFace> = [{ link: "https://web.facebook.com/haroonrasheed.valient", icon: "facebook" }, { link: "https://twitter.com/Horroon", icon: "twitter" }, { link: "https://www.instagram.com/horroona/", icon: "instagram" }]
 
 const Main: React.FC = (): JSX.Element => {
 
@@ -44,21 +57,9 @@ const Main: React.FC = (): JSX.Element => {
                 </div>
                 <div className="col-lg-7">
                     <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                        <div>
-                            <i className="fa fa-facebook" />
-                        </div>
-
-                        <div>
-                            <i className="fa fa-twitter" />
-                        </div>
-
-                        <div>
-                            <i className="fa fa-instagram" />
-                        </div>
-
-                        <div>
-                            <i className="fa fa-pinterest" />
-                        </div>
+                        {
+                            SocialButtonsList.map(button => <SocialButton link={button.link} icon={button.icon} />)
+                        }
                     </div>
                 </div>
             </div>
@@ -66,7 +67,7 @@ const Main: React.FC = (): JSX.Element => {
                 <div className="col-lg-12">
                     <table className="table table-bordered">
                         {
-                            TableValues.map((value)=><TableRow head={value.head} value={value.value} />)
+                            TableValues.map((value) => <TableRow head={value.head} value={value.value} />)
                         }
                     </table>
                 </div>
