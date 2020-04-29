@@ -9,7 +9,7 @@ const Tile: React.FC<ColumnFace> = (props): JSX.Element => {
         <div className="container">
             <img src={props.img} alt="Avatar" className="image til-img" draggable={false} />
             <div className="middle">
-                <div className="text"><p>{props.title}</p></div>
+                <div className="frvt-cptn-text"><p>{props.title}</p></div>
             </div>
         </div>
     </div>
