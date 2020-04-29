@@ -8,7 +8,8 @@ import Favourite from '../favourite/index';
 import Profile from '../profile/index';
 import Gallery from '../gallery/index';
 import Contact from '../contact/index';
-
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 import {
     BrowserRouter as Router,
     Switch,
@@ -39,6 +40,7 @@ const RouterComponent = () => {
                     </Route>
                 </Switch>
                 <Footer />
+                <ToastContainer />
             </div>
         </Router>)
 }
