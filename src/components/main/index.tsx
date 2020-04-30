@@ -8,7 +8,9 @@ import Favourite from '../favourite/index';
 import Profile from '../profile/index';
 import Gallery from '../gallery/index';
 import Contact from '../contact/index';
-import { ToastContainer} from 'react-toastify';
+import AboutMe from '../about/aboutme/index';
+
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 import {
     BrowserRouter as Router,
@@ -37,6 +39,9 @@ const RouterComponent = () => {
                     </Route>
                     <Route path="/contactme" exact>
                         <Contact />
+                    </Route>
+                    <Route path="/aboutme" exact>
+                        <AboutMe />
                     </Route>
                 </Switch>
                 <Footer />
