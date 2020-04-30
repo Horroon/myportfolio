@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Item: React.FC<ItemFace> = (props): JSX.Element => {
 
-    return <div className="col-lg-3 abt-me-mn-dv">
+    return <div className="col-lg-4 abt-me-mn-dv">
         <div>
             <h4 className="uppercase">{props.title}</h4>
         </div>
