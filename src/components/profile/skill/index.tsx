@@ -18,7 +18,7 @@ const TableValues: Array<tableFace> = [{ head: { c1: "Position", c2: "Experience
 },
 ]
 
-const Languages: Array<LanguageFace> = [{ lName: "JavaScript", progress: 80 }, { lName: "Java", progress: 40 }, { lName: "Reactjs", progress: 70 }, { lName: "React Native", progress: 65 }, { lName: "GraphQL", progress: 75 }, { lName: "Apollo Client", progress: 70 }, { lName: "Prisma Api", progress: 70 }, { lName: "TypeScript", progress: 50 }, { lName: "Flutter", progress: 40 }]
+const Languages: Array<LanguageFace> = [{ lName: "JavaScript", progress: 80 },{ lName: "Nodejs", progress: 73 }, { lName: "Java", progress: 40 }, { lName: "Reactjs", progress: 70 }, { lName: "React Native", progress: 65 }, { lName: "GraphQL", progress: 75 }, { lName: "Apollo Client", progress: 70 }, { lName: "Prisma Api", progress: 70 }, { lName: "TypeScript", progress: 50 }, { lName: "Flutter", progress: 40 }]
 
 interface LinkFace {
     icon: string,
