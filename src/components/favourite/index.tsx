@@ -12,12 +12,14 @@ import quaid from '../../assets/books/quaid.jpg'
 import Dangal from '../../assets/movies/dangal.jpg';
 import Idiot from '../../assets/movies/idiot.jpg';
 import richardparker from '../../assets/movies/richardparker.jpg';
+import Titanic from '../../assets/movies/titanic.jpg';
 //end movies
 
 //games
 import CMNDO from '../../assets/games/commando2.jpg';
 import NFS from '../../assets/games/NFS.jpg';
 import IGI from '../../assets/games/IGI.jpg';
+import AOE from '../../assets/games/AOE.jpg'
 //games end
 
 interface ColumnFace {
@@ -31,8 +33,8 @@ interface RowFace {
 }
 
 const Books: Array<ColumnFace> = [{ title: "Muhammad's Life", img: LMB },{ title: "Tariq Bin Zayad", img: tariq },{ title: "Quaid e Azam", img: quaid }]
-const Games: Array<ColumnFace> = [{ title: "IGI", img: IGI },{ title: "Commando 2", img: CMNDO },{ title: "Need for speed", img: NFS },]
-const Movies: Array<ColumnFace> = [{ title: "3 Idiots", img: Idiot },{ title: "Dangal", img: Dangal },{ title: "Richard Parker", img: richardparker },]
+const Games: Array<ColumnFace> = [{ title: "IGI", img: IGI },{ title: "Commando 2", img: CMNDO },{ title: "Need for speed", img: NFS },{ title: "Age Of Empire", img: AOE },]
+const Movies: Array<ColumnFace> = [{ title: "3 Idiots", img: Idiot },{ title: "Dangal", img: Dangal },{ title: "Richard Parker", img: richardparker },{ title: "Titanic", img: Titanic },]
 
 const MainItems: Array<RowFace> = [{ BigObject: Books, MainTitle: "Favorite Books" }, { BigObject: Movies, MainTitle: "Favorite Movies" }, { BigObject: Games, MainTitle: "Favorite Games" }]
 
