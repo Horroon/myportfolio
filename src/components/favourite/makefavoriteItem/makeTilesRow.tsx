@@ -19,13 +19,12 @@ const TilesRow: React.FC<TilesRowFace> = (props): JSX.Element => {
     const scrollLeft = () => {
         // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         let ScrollMenu = document.getElementById(`scroll${props.id}`)
-        scroll += 20;
         if (ScrollMenu) {
-            if (ScrollMenu.scrollWidth > ScrollMenu.clientWidth) {
-                if (scrollFullWidth > ScrollMenu.clientWidth) {
-                    debugger
+            if (ScrollMenu.scrollWidth >= ScrollMenu.clientWidth) {
+                if (scrollFullWidth >ScrollMenu.clientWidth) {
+                    scroll += 20;
                     ScrollMenu.style.transform = "translateX(" + scroll + "px" + ")";
-                    ScrollMenu.style.transition = "0.5s"
+                    ScrollMenu.style.transition = "0.1s"
                     setScrollFullWidth(scrollFullWidth - 20)
                     setScroll(scroll)
                 }
@@ -40,24 +39,33 @@ const TilesRow: React.FC<TilesRowFace> = (props): JSX.Element => {
     const scrollRight = () => {
         // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         let ScrollMenu = document.getElementById(`scroll${props.id}`)
-        scroll -= 20;
-        setScroll(scroll)
         if (ScrollMenu) {
-            if (ScrollMenu.clientWidth < ScrollMenu.scrollWidth) {
-                if (scrollFullWidth < ScrollMenu.scrollWidth) {
+            if (ScrollMenu.clientWidth <= ScrollMenu.scrollWidth) {
+                if (scrollFullWidth <= ScrollMenu.scrollWidth) {
+                    scroll -= 20;
+                    setScroll(scroll)
                     ScrollMenu.style.transform = "translateX(" + scroll + "px" + ")";
-                    ScrollMenu.style.transition = "0.5s"
+                    ScrollMenu.style.transition = "0.1s"
                     setScrollFullWidth(scrollFullWidth + 20)
 
+                } else {
+                    console.log('else call')
                 }
             }
         }
     }
 
     useEffect(() => {
+        const ScrollParentWidth = document.getElementById(`scrl-prnt${props.id}`)
         const Scroll = document.getElementById(`scroll${props.id}`)
-        if (Scroll) setScrollFullWidth(Scroll.clientWidth);
-        debugger
+        if(ScrollParentWidth && Scroll){
+            if(ScrollParentWidth.clientWidth > Scroll.clientWidth){
+                Scroll.style.width = `${ScrollParentWidth.clientWidth}px`
+                setScrollFullWidth(ScrollParentWidth.clientWidth)
+            }else{
+                setScrollFullWidth(Scroll.clientWidth)
+            }
+        }
     }, [])
 
     console.log('scrollwidthFull', scrollFullWidth, scroll)
@@ -69,7 +77,7 @@ const TilesRow: React.FC<TilesRowFace> = (props): JSX.Element => {
                 </h3>
             </div>
         </div>
-        <div style={{ display: 'flex', overflow: 'hidden' }}>
+        <div style={{ display: 'flex', overflow: 'hidden' }} id={`scrl-prnt${props.id}`}>
             <i className="fa fa-chevron-left scrl-dv-icn" onClick={scrollLeft} />
             <div className="scrollmenu" id={`scroll${props.id}`} style={{ margin: 0 }}>
 

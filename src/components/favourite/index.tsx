@@ -17,9 +17,9 @@ interface RowFace {
     BigObject: Array<ColumnFace>,
 }
 
-const Books: Array<ColumnFace> = [{ title: "Muhammad's Life", img: LMB }, { title: "Muhammad's Life", img: LMB }, { title: "Muhammad's Life", img: LMB }, { title: "Muhammad's Life", img: LMB }, { title: "Muhammad's Life", img: LMB }, { title: "Muhammad's Life", img: LMB }, { title: "Muhammad's Life", img: LMB }, { title: "Muhammad's Life", img: LMB }]
-const Games: Array<ColumnFace> = [{ title: "Best Game", img: G1 }, { title: "Super Hero", img: SuperHero }, { title: "Fun Game", img: Fun }, { title: "Best Game", img: G1 }, { title: "Super Hero", img: SuperHero }, { title: "Fun Game", img: Fun },{ title: "Super Hero", img: SuperHero }, { title: "Fun Game", img: Fun },]
-const Movies: Array<ColumnFace> = [{ title: "Fantasy Movie", img: Fantasy }, { title: "Super Hero", img: SuperHero }, { title: "Fun Game", img: Fun }, { title: "Fun Game", img: Fun }, { title: "Fun Game", img: Fun }, { title: "Fun Game", img: Fun }, { title: "Fantasy Movie", img: Fantasy }, { title: "Super Hero", img: SuperHero }, { title: "Fun Game", img: Fun }, { title: "Fun Game", img: Fun }, { title: "Fun Game", img: Fun }, { title: "Fun Game", img: Fun }]
+const Books: Array<ColumnFace> = [{ title: "Muhammad's Life", img: LMB },{ title: "Muhammad's Life", img: LMB },{ title: "Muhammad's Life", img: LMB },{ title: "Muhammad's Life", img: LMB },{ title: "Muhammad's Life", img: LMB },{ title: "Muhammad's Life", img: LMB },{ title: "Muhammad's Life", img: LMB },{ title: "Muhammad's Life", img: LMB },]
+const Games: Array<ColumnFace> = [{ title: "Best Game", img: G1 },]
+const Movies: Array<ColumnFace> = [{ title: "Fantasy Movie", img: Fantasy },]
 
 const MainItems: Array<RowFace> = [{ BigObject: Books, MainTitle: "Favorite Books" }, { BigObject: Movies, MainTitle: "Favorite Movies" }, { BigObject: Games, MainTitle: "Favorite Games" }]
 
