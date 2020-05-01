@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import Tile from './makeTile';
 
 interface TilesRowFace {
@@ -21,7 +21,7 @@ const TilesRow: React.FC<TilesRowFace> = (props): JSX.Element => {
         let ScrollMenu = document.getElementById(`scroll${props.id}`)
         if (ScrollMenu) {
             if (ScrollMenu.scrollWidth >= ScrollMenu.clientWidth) {
-                if (scrollFullWidth >ScrollMenu.clientWidth) {
+                if (scrollFullWidth > ScrollMenu.clientWidth) {
                     scroll += 20;
                     ScrollMenu.style.transform = "translateX(" + scroll + "px" + ")";
                     ScrollMenu.style.transition = "0.1s"
@@ -55,17 +55,23 @@ const TilesRow: React.FC<TilesRowFace> = (props): JSX.Element => {
         }
     }
 
-    useEffect(() => {
+    const WindowUpdate = () => {
         const ScrollParentWidth = document.getElementById(`scrl-prnt${props.id}`)
         const Scroll = document.getElementById(`scroll${props.id}`)
-        if(ScrollParentWidth && Scroll){
-            if(ScrollParentWidth.clientWidth > Scroll.clientWidth){
+        if (ScrollParentWidth && Scroll) {
+            if (ScrollParentWidth.clientWidth > Scroll.clientWidth) {
                 Scroll.style.width = `${ScrollParentWidth.clientWidth}px`
                 setScrollFullWidth(ScrollParentWidth.clientWidth)
-            }else{
+            } else {
                 setScrollFullWidth(Scroll.clientWidth)
             }
         }
+    }
+
+    useLayoutEffect(() => {
+        window.addEventListener('resize', WindowUpdate)
+        WindowUpdate()
+        return () => window.removeEventListener('resize', WindowUpdate)
     }, [])
 
     console.log('scrollwidthFull', scrollFullWidth, scroll)

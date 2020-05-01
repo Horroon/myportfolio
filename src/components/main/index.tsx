@@ -9,6 +9,7 @@ import Profile from '../profile/index';
 import Gallery from '../gallery/index';
 import Contact from '../contact/index';
 import AboutMe from '../about/aboutme/index';
+import DetailScreen from '../favourite/detail/index';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
@@ -42,6 +43,9 @@ const RouterComponent = () => {
                     </Route>
                     <Route path="/aboutme" exact>
                         <AboutMe />
+                    </Route>
+                    <Route path="/detail" exact>
+                        <DetailScreen />
                     </Route>
                 </Switch>
                 <Footer />
