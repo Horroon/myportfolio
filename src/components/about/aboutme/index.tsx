@@ -1,5 +1,5 @@
 import React from 'react';
-import Profile from '../../../assets/acct.jpg'
+import Profile from '../../../assets/acct.webp'
 import './style.scss'
 const Main: React.FC = (): JSX.Element => {
     return <div>

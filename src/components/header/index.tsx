@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { HeaderProps } from './interface';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.webp'
 import './style.css';
 
 const Header: React.FC<HeaderProps> = (props): JSX.Element => {

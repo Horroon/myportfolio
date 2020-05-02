@@ -4,22 +4,22 @@ import './style.scss'
 
 
 
-import LMB from '../../assets/books/LMB.jpg'
-import tariq from '../../assets/books/tariqbz.jpg'
-import quaid from '../../assets/books/quaid.jpg'
+import LMB from '../../assets/books/LMB.webp'
+import tariq from '../../assets/books/tariqbz.webp'
+import quaid from '../../assets/books/quaid.webp'
 
 //movies
-import Dangal from '../../assets/movies/dangal.jpg';
-import Idiot from '../../assets/movies/idiot.jpg';
-import richardparker from '../../assets/movies/richardparker.jpg';
-import Titanic from '../../assets/movies/titanic.jpg';
+import Dangal from '../../assets/movies/dangal.webp';
+import Idiot from '../../assets/movies/idiot.webp';
+import richardparker from '../../assets/movies/richardparker.webp';
+import Titanic from '../../assets/movies/titanic.webp';
 //end movies
 
 //games
-import CMNDO from '../../assets/games/commando2.jpg';
-import NFS from '../../assets/games/NFS.jpg';
-import IGI from '../../assets/games/IGI.jpg';
-import AOE from '../../assets/games/AOE.jpg'
+import CMNDO from '../../assets/games/commando2.webp';
+import NFS from '../../assets/games/NFS.webp';
+import IGI from '../../assets/games/IGI.webp';
+import AOE from '../../assets/games/AOE.webp'
 //games end
 
 interface ColumnFace {

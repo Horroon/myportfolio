@@ -3,10 +3,10 @@ import PhotoItem from './photo';
 import { PhotoFace } from './interfaces'
 import './style.scss';
 
-import G1 from '../../assets/gallery/g1.jpg'
-import G2 from '../../assets/gallery/g2.jpg'
-import G3 from '../../assets/gallery/g3.jpg'
-import G4 from '../../assets/gallery/g4.jpg'
+import G1 from '../../assets/gallery/g1.webp'
+import G2 from '../../assets/gallery/g2.webp'
+import G3 from '../../assets/gallery/g3.webp'
+import G4 from '../../assets/gallery/g4.webp'
 
 const photoes: Array<PhotoFace> = [{ url: G1, captionText: "Lahore" }, { url: G2, captionText: "Sawat" }, { url: G3, captionText: "Kalaam" }, { url: G4, captionText: "Kalaam" },]
 const GalleryMainComponent: React.FC = (): JSX.Element => {

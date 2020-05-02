@@ -1,5 +1,5 @@
 import React from 'react';
-import Profile from '../../assets/acct.jpg';
+import Profile from '../../assets/acct.webp';
 const PictureSection: React.FC = (): JSX.Element => {
     return <div style={{ color: 'white', width: '100%' }}>
         <div className="row pfl-bg-dv">

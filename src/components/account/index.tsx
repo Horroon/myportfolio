@@ -1,5 +1,5 @@
 import React from 'react';
-import DefaultProfile from '../../assets/account_p.jpg'
+import DefaultProfile from '../../assets/account_p.webp'
 import './style.scss';
 
 const AcountDiv = (): JSX.Element => {

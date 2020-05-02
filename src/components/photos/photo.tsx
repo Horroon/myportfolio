@@ -1,9 +1,9 @@
 import React, { ImgHTMLAttributes } from 'react';
 import img1 from '../../assets/img1.jpg'
-import Scene1 from '../../assets/sceneries/v1.jpg';
-import Scene2 from '../../assets/sceneries/v2_weather.jpg';
-import Scene3 from '../../assets/sceneries/prty.jpg';
-import Scene4 from '../../assets/sceneries/grdtn.jpg';
+import Scene1 from '../../assets/sceneries/v1.webp';
+import Scene2 from '../../assets/sceneries/v2_weather.webp';
+import Scene3 from '../../assets/sceneries/prty.webp';
+import Scene4 from '../../assets/sceneries/grdtn.webp';
 
 interface photoFace {
     img: string,
