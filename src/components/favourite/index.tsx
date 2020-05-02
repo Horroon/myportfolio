@@ -24,7 +24,9 @@ import AOE from '../../assets/games/AOE.webp'
 
 interface ColumnFace {
     img: string,
-    title: string
+    title: string,
+    desc:string,
+    releaseYr:string
 }
 
 interface RowFace {
@@ -32,9 +34,9 @@ interface RowFace {
     BigObject: Array<ColumnFace>,
 }
 
-const Books: Array<ColumnFace> = [{ title: "Muhammad's Life", img: LMB },{ title: "Tariq Bin Zayad", img: tariq },{ title: "Quaid e Azam", img: quaid }]
-const Games: Array<ColumnFace> = [{ title: "IGI", img: IGI },{ title: "Commando 2", img: CMNDO },{ title: "Need for speed", img: NFS },{ title: "Age Of Empire", img: AOE },]
-const Movies: Array<ColumnFace> = [{ title: "3 Idiots", img: Idiot },{ title: "Dangal", img: Dangal },{ title: "Richard Parker", img: richardparker },{ title: "Titanic", img: Titanic },]
+const Books: Array<ColumnFace> = [{ title: "Muhammad's Life", img: LMB,desc:"Description", releaseYr: '2019' },{ title: "Tariq Bin Zayad", img: tariq, desc:"lsjdlfksjkd lkasdfj", releaseYr:"2015" },{ title: "Quaid e Azam", img: quaid, desc:"lsjdlfksjkd lkasdfj", releaseYr:"2015" }]
+const Games: Array<ColumnFace> = [{ title: "IGI", img: IGI, desc:"lsjdlfksjkd lkasdfj", releaseYr:"2015" },{ title: "Commando 2", img: CMNDO, desc:"lsjdlfksjkd lkasdfj", releaseYr:"2015" },{ title: "Need for speed", img: NFS, desc:"lsjdlfksjkd lkasdfj", releaseYr:"2015" },{ title: "Age Of Empire", img: AOE, desc:"lsjdlfksjkd lkasdfj", releaseYr:"2015" },]
+const Movies: Array<ColumnFace> = [{ title: "3 Idiots", img: Idiot, desc:"lsjdlfksjkd lkasdfj", releaseYr:"2015" },{ title: "Dangal", img: Dangal, desc:"lsjdlfksjkd lkasdfj", releaseYr:"2015" },{ title: "Richard Parker", img: richardparker, desc:"lsjdlfksjkd lkasdfj", releaseYr:"2015" },{ title: "Titanic", img: Titanic, desc:"lsjdlfksjkd lkasdfj", releaseYr:"2015" },]
 
 const MainItems: Array<RowFace> = [{ BigObject: Books, MainTitle: "Favorite Books" }, { BigObject: Movies, MainTitle: "Favorite Movies" }, { BigObject: Games, MainTitle: "Favorite Games" }]
 

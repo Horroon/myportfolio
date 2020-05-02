@@ -9,7 +9,9 @@ interface TilesRowFace {
 
 interface ItemFace {
     img: string,
-    title: string
+    title: string,
+    desc: string,
+    releaseYr: string
 }
 
 const TilesRow: React.FC<TilesRowFace> = (props): JSX.Element => {
@@ -88,7 +90,7 @@ const TilesRow: React.FC<TilesRowFace> = (props): JSX.Element => {
             <div className="scrollmenu" id={`scroll${props.id}`} style={{ margin: 0 }}>
 
                 {
-                    props.items.map((item, i) => <Tile img={item.img} title={item.title} key={i} />)
+                    props.items.map((item, i) => <Tile obj={item} key={i} />)
                 }
 
             </div>
