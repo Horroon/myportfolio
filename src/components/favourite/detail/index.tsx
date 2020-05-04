@@ -35,13 +35,9 @@ const Main: React.FC = (props): JSX.Element => {
                             <h1>{item.title}</h1>
                         </div>
                         <div className="abtme-jb-ttl-dv">
-                            <h3>release Year: {item.releaseYr}</h3>
+                            <h3>Release Year: {item.releaseYr}</h3>
                         </div>
-                        <div className="abtme-dscrptn">
-                            <p>
-                                {item.desc}
-                            </p>
-                        </div>
+                        <div className="abtme-dscrptn" dangerouslySetInnerHTML={{__html:`${item.desc}`}} />
                     </div>
                 </div>
             </div>

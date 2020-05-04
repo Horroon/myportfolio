@@ -1,6 +1,17 @@
-import {createStore} from 'redux'
-import {reducers} from './comibereducer';
+import { createStore } from 'redux'
+import { reducers } from './comibereducer';
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+import hardSet from 'redux-persist/lib/stateReconciler/hardSet'
 
-const Store  = createStore(reducers);
+const persistConfig = {
+    key: 'root',
+    storage,
+    whitelist:['FavoriteReducer'],
+    stateReconciler: hardSet,
+}
 
-export default Store
+const persistedReducer = persistReducer(persistConfig, reducers)
+
+export const Store = createStore(persistedReducer);
+export const persistor = persistStore(Store)
