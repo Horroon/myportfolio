@@ -26,10 +26,10 @@ const TilesRow: React.FC<TilesRowFace> = (props): JSX.Element => {
         if (ScrollMenu) {
                 if (ScrollMenu.scrollWidth >= ScrollMenu.clientWidth) {
                     if (scrollFullWidth > ScrollMenu.clientWidth) {
-                        scroll += 20;
+                        scroll += 50;
                         ScrollMenu.style.transform = "translateX(" + scroll + "px" + ")";
-                        ScrollMenu.style.transition = "0.1s"
-                        setScrollFullWidth(scrollFullWidth - 20)
+                        ScrollMenu.style.transition = "0.5s"
+                        setScrollFullWidth(scrollFullWidth - 50)
                         setScroll(scroll)
                     }
                     else {
@@ -46,11 +46,11 @@ const TilesRow: React.FC<TilesRowFace> = (props): JSX.Element => {
         if (ScrollMenu) {
             if (ScrollMenu.clientWidth <= ScrollMenu.scrollWidth) {
                 if (scrollFullWidth < ScrollMenu.scrollWidth) {
-                    scroll -= 20;
+                    scroll -= 50;
                     setScroll(scroll)
                     ScrollMenu.style.transform = "translateX(" + scroll + "px" + ")";
-                    ScrollMenu.style.transition = "0.1s"
-                    setScrollFullWidth(scrollFullWidth + 20)
+                    ScrollMenu.style.transition = "0.5s"
+                    setScrollFullWidth(scrollFullWidth + 50)
 
                 } 
             }

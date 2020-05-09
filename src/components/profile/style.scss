@@ -2,14 +2,17 @@
     margin: 0px;
 }
 .pfl-bg-dv{
-    margin: 0px;
-    background: url('../../assets/profile_back.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url('../../assets/bg.jpg');
     background-size: cover;
-    padding: 9%;
+    width: 100%;
 }
-
+.covwe-inn{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    padding: 85px;
+    display: flex;
+}
 .pf-img{
     width: 100%;
 }

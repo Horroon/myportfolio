@@ -21,7 +21,7 @@ const Tile: React.FC<ColumnFace> = (props): JSX.Element => {
     return <div className="col-lg-2 til-prnt-cntr">
         <Link to="/detail" onClick={() => Dispatch({ type: "selectedItem", payload: props.obj })}>
             <div className="container">
-                <img src={props.obj.img} alt="Avatar" className="image til-img" draggable={false} />
+                <img src={props.obj.img} alt="Avatar" className="img-responsive img-fluid image til-img" draggable={false} />
                 <div className="middle">
                     <div className="frvt-cptn-text"><p>{props.obj.title}</p></div>
                 </div>

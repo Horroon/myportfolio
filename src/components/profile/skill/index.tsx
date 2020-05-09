@@ -18,7 +18,7 @@ const TableValues: Array<tableFace> = [{ head: { c1: "Position", c2: "Experience
 },
 ]
 
-const Languages: Array<LanguageFace> = [{ lName: "JavaScript", progress: 80 },{ lName: "Nodejs", progress: 73 }, { lName: "Java", progress: 40 }, { lName: "Reactjs", progress: 70 }, { lName: "React Native", progress: 65 }, { lName: "GraphQL", progress: 75 }, { lName: "Apollo Client", progress: 70 }, { lName: "Prisma Api", progress: 70 }, { lName: "TypeScript", progress: 50 }, { lName: "Flutter", progress: 40 }]
+const Languages: Array<LanguageFace> = [{ lName: "JavaScript", progress: 80 }, { lName: "Nodejs", progress: 73 }, { lName: "Java", progress: 40 }, { lName: "Reactjs", progress: 70 }, { lName: "React Native", progress: 65 }, { lName: "GraphQL", progress: 75 }, { lName: "Apollo Client", progress: 70 }, { lName: "Prisma Api", progress: 70 }, { lName: "TypeScript", progress: 50 }, { lName: "Flutter", progress: 40 }]
 
 interface LinkFace {
     icon: string,
@@ -48,7 +48,7 @@ const Main: React.FC = (): JSX.Element => {
                 <div className="col-lg-5">
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                         <div>
-                            <button className="btn"><i className="fa fa-share-alt" />Follow Me</button>
+                            <a href="#pfl-bg-dv"><button className="btn"><i className="fa fa-paper-plane" />Hire Me</button></a>
                         </div>
                         <div>
                             <button className="btn"><i className="fa fa-download" />Download Resume</button>
@@ -63,8 +63,8 @@ const Main: React.FC = (): JSX.Element => {
                     </div>
                 </div>
             </div>
-            <div className="row">
-                <div className="col-lg-12">
+            <div className="row rmr-mrgn">
+                <div className="col-lg-12 rmr-pdng">
                     <table className="table table-bordered">
                         {
                             TableValues.map((value) => <TableRow head={value.head} value={value.value} />)
