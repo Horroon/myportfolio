@@ -9,7 +9,7 @@ const Items: Array<itemFace> = [
     {
         iconClass: 'fa fa-map-marker',
         title: 'Abode',
-        desc: `<a class=address-link href=https://www.mtbc.com target=_black>Medical Transcripting & Billing Company</a> 6th Road, Rawalpindi, Pakistan`
+        desc: `<a class=address-link href=https://www.mtbc.com target=_black>Medical Transcription and Billing Corporation Inc.</a> 6th Road, Rawalpindi, Pakistan`
     },
     {
         iconClass: 'fa fa-globe',
