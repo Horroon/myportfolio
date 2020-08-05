@@ -17,8 +17,7 @@ const PictureSection: React.FC = (): JSX.Element => {
                             </div>
                             <div>
                                 <p>
-                                    Working over mini projects with MTBC and other react native projects for different plateform such as Mobile(android,ios) and Web Application in reactjs. Working in GraphQL and Prisma Api server in Node.js
-                        </p>
+                                I am a 24 year old software engineer with 2 year in house experience as FrontEnd Developer with working experience on backend as Node.js developer. I have developed Single Page Applications from scratch as well worked with medium level teams for a range of clients. For my side projects I have worked with React Native, Angular and Vanilla JS . I am currently working with MTBC Islamabad. I feel excited to work with fast paced progressive teams achieving something great.   </p>
                             </div>
                         </div>
                     </div>
