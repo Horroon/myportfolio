@@ -6,6 +6,7 @@ export interface ColumnFace {
 }
 
 export interface RowFace {
+    id?:string
     MainTitle: string,
     BigObject: Array<ColumnFace>,
 }

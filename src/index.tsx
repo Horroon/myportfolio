@@ -5,7 +5,8 @@ import App from './components/main/index';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux'
 import { Store, persistor } from './components/redux/store'
-import { PersistGate } from 'redux-persist/integration/react'
+import { PersistGate } from 'redux-persist/integration/react';
+import './common.style.scss';
 
 ReactDOM.render(
   <React.StrictMode>

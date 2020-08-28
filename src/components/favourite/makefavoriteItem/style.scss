@@ -1,0 +1,22 @@
+.sm-crsl-pdng{
+        height: 350px;
+        width: 250px;
+        padding: 3px;
+        border-radius: 16px;
+}
+.fvrt-itm-ttl{
+    text-align: start;
+    padding: 21px;
+    color: white;
+}
+.crsl-cntrl-pdng{
+    top: 78px !important;
+}
+.zoom {
+    
+    &:hover{
+        transform: scale(1.1);
+    }
+    transition: 0.5s;
+    margin: 0 auto;
+  }

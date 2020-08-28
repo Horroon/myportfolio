@@ -17,7 +17,18 @@ export const Games: Array<ColumnFace> = [
     <p>
     Project I.G.I. is a tactical first-person shooter video game developed by Innerloop Studios and released in December 2000 by Eidos Interactive</P>
 `, releaseYr: "December 8, 2000"
-    }, {
+    },
+    {
+        title: "IGI2", img: IGI, desc: `
+        <h6>Developer: Innerloop Studios</h6>
+        <h6>Designer: Gavin Skinner</h6>
+        <h6>Publishers: Eidos Interactive, Square Enix Europe</h6>
+        <h6>Platform: Microsoft Windows</h6>
+    <p>
+    Project I.G.I. is a tactical first-person shooter video game developed by Innerloop Studios and released in December 2000 by Eidos Interactive</P>
+`, releaseYr: "December 8, 2000"
+    },
+    {
         title: "Commando 2", img: CMNDO, desc: `
         <h6>Genre: Real-time tactics</h6>
         <h6>Series: Commandos</h6>
