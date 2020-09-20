@@ -40,7 +40,7 @@ const Items: Array<itemFace> = [
 ]
 
 
-const Footer: React.FC = (): JSX.Element => {
+export const Footer: React.FC = (): JSX.Element => {
 
     return <footer className="page-footer font-small dark pt-4 ftr-cstm-style">
         <div className="row ftr-rw-1">

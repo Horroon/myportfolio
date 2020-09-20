@@ -9,7 +9,7 @@ import G3 from '../../assets/gallery/g3.webp'
 import G4 from '../../assets/gallery/g4.webp'
 
 const photoes: Array<PhotoFace> = [{ url: G1, captionText: "Lahore" }, { url: G2, captionText: "Sawat" }, { url: G3, captionText: "Kalaam" }, { url: G4, captionText: "Kalaam" },]
-const GalleryMainComponent: React.FC = (): JSX.Element => {
+export const GalleryMainComponent: React.FC = (): JSX.Element => {
     return <div>
         <div className="container-fluid glry-cntnr">
             <div className="glry-ttl-prnt-dv">

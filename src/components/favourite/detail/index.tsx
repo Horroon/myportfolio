@@ -17,7 +17,7 @@ interface ReducerFace {
     }
 }
 
-const Main: React.FC = (props): JSX.Element => {
+export const Detail: React.FC = (props): JSX.Element => {
     const item = useSelector<ReducerFace, ItemFace>(store => store.FavoriteReducer.selectedItem);
 
     return <div>
@@ -44,5 +44,3 @@ const Main: React.FC = (props): JSX.Element => {
         </div>
     </div>
 }
-
-export default Main

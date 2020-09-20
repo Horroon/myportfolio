@@ -31,7 +31,7 @@ const reducer = (state = InitialState, action: ActionFace) => {
 
     }
 }
-const ContactMain: React.FC = (): JSX.Element => {
+export const Contact: React.FC = (): JSX.Element => {
     let [state, setState] = useReducer(reducer, InitialState)
 
     const sendDate = () => {
@@ -96,5 +96,3 @@ const ContactMain: React.FC = (): JSX.Element => {
         </div>
     </div >
 }
-
-export default ContactMain

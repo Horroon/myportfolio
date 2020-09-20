@@ -4,7 +4,8 @@ import Activity from './activity';
 import Skill from './skill/index';
 
 import './style.scss'
-const MainProfile: React.FC = (): JSX.Element => {
+
+export const MainProfile: React.FC = (): JSX.Element => {
     return <div>
         <div className="row pf-rw-1">
             <PictureSection />

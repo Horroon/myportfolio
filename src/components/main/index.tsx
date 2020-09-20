@@ -1,15 +1,6 @@
 import React from 'react';
-
-import Header from '../header/index';
-import Home from '../home/index';
-import MainUsersFile from '../firebase_practice/user/main'
+import { SchemaParser } from '../../services/schemaParser';
 import Footer from '../footer/index';
-import Favourite from '../favourite/index';
-import Profile from '../profile/index';
-import Gallery from '../gallery/index';
-import Contact from '../contact/index';
-import AboutMe from '../about/aboutme/index';
-import DetailScreen from '../favourite/detail/index';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
@@ -24,28 +15,28 @@ const RouterComponent = () => {
     return (
         <Router>
             <div style={{ background: '#151515' }}>
-                <Header news={"Working At MTBC Since 18 Feb, 2020"} uicomponents={[{ link: '/', text: 'Home' }, { link: '/favorite', text: 'Favorite' }, { link: '/contactme', text: 'Contact' }, { link: '/faq', text: 'FAQ' }]} />
+                <SchemaParser schema={{ component: "HEADER", item: { news: "Working At MTBC Since 18 Feb, 2020", uicomponents: [{ link: '/', text: 'Home' }, { link: '/favorite', text: 'Favorite' }, { link: '/contactme', text: 'Contact' }, { link: '/faq', text: 'FAQ' }] } }} />
                 <Switch>
                     <Route path="/" exact >
-                        <Home />
+                        <SchemaParser schema={{ component: "HOME" }} />
                     </Route>
                     <Route path="/favorite" exact>
-                        <Favourite />
+                        <SchemaParser schema={{ component: "FAVOURITE" }} />
                     </Route>
                     <Route path="/myprofile" exact>
-                        <Profile />
+                        <SchemaParser schema={{ component: "PROFILE" }} />
                     </Route>
                     <Route path="/gallery" exact>
-                        <Gallery />
+                        <SchemaParser schema={{ component: "GALLERY" }} />
                     </Route>
                     <Route path="/contactme" exact>
-                        <Contact />
+                        <SchemaParser schema={{ component: "CONTACT" }} />
                     </Route>
                     <Route path="/aboutme" exact>
-                        <AboutMe />
+                        <SchemaParser schema={{ component: "ABOUTME" }} />
                     </Route>
                     <Route path="/detail" exact>
-                        <DetailScreen />
+                        <SchemaParser schema={{component:"DETAIL"}} />
                     </Route>
                 </Switch>
                 <Footer />
