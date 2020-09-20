@@ -1,0 +1,30 @@
+{
+    "div":{
+        "className":"about-prnt",
+        "div":{
+            "img":{
+                "className":"acct-img-dv",
+                "src":"../../assets/account_p.webp"
+            }
+        },
+        "div":{
+            "className":"act-bdy-dv",
+            "div":{
+                "h6":{
+                    "className":"acnt-ttl",
+                    "value":"Haroon Rasheed"
+                },
+                "span":{
+                    "value":"Developer For React Tecknologies & GraphQL"
+                },
+                "div":{
+                    "className":"mail-dv",
+                    "span":{
+                     "value":"horroona@gmail.com"   
+                    }
+                }
+            }
+
+        }
+    }
+}
