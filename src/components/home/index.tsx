@@ -1,25 +1,22 @@
 import React from 'react';
-import PSlider from '../p_slider/index';
-import AccountDiv from '../account/index';
-import {AboutMain} from '../about/index';
-import {Picture} from '../photos/index';
+import {SchemaParser} from '../../services/schemaParser';
 
 import './style.scss'
 export const Home = (): JSX.Element => {
     return <div>
             <div className="row hm-rw-1">
                 <div className="col-lg-6 slidr-clm">
-                    <PSlider />
+                    <SchemaParser schema={{component:"PSLIDER"}} />
                 </div>
                 <div className="col-lg-6 acnt-clm">
-                    <AccountDiv />
+                    <SchemaParser schema={{component: "SIMPLEINFO"}} />
                 </div>
             </div>
             <div>{/* Row 2 */}
-                <AboutMain />
+                <SchemaParser schema={{component:"ABOUTSECTION"}} />
             </div>
             <div>{/* Row 3 */}
-                <Picture />
+                <SchemaParser schema={{component:"PICTURES"}} />
             </div>
 
     </div>

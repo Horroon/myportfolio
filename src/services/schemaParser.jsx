@@ -8,7 +8,11 @@ import {
     Header,
     Contact,
     AboutMe,
-    Detail
+    Detail,
+    P_Slider,
+    AboutMain,
+    Picture,
+    AcountInfo,
 } from '../components/index';
 
 
@@ -23,7 +27,11 @@ import {
         GALLERY:_=><GalleryMainComponent />,
         ABOUTME: _=><AboutMe />,
         CONTACT: _=><Contact />,
-        DETAIL: _=><Detail />
+        DETAIL: _=><Detail />,
+        PSLIDER: _=><P_Slider />,
+        ABOUTSECTION:_=><AboutMain />,
+        PICTURES:_=><Picture />,
+        SIMPLEINFO:_=><AcountInfo />
     }
      const Screen = components[schema.component];
      return <Screen />

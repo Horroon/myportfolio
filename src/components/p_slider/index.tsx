@@ -12,7 +12,7 @@ const imgs = [
   { url: Scene4 },
 ]
 
-const P_Slider = () => {
+export const P_Slider = () => {
  
   return <div id="demo" className="carousel slide" data-ride="carousel">
 

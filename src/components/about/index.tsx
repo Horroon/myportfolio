@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { ItemFace } from './interface';
 import {store} from '../../models/index';
 import Item from './item';
-import './style.scss';
+import styles from './style.module.scss';
 
 const Items: Array<ItemFace> = [
     { title: "About Me", iconClass: "fa fa-users", desc: "Social connection is important as it improves our physical, emotional, and mental health.", pathurl: '/aboutme' },
@@ -14,7 +14,7 @@ export const AboutMain = (): JSX.Element => {
     useEffect(()=>{
         store.dispatch.loginInformation.updatelogin({email:"abc@gmail.com", tokenId: "34kldjaflk9348578934"})
     },[])
-    return <div className="row hm-rw-2">
+    return <div className={`row ${styles["hm-rw-2"]}`}>
         {Items.map((item, i) => <Item title={item.title} desc={item.desc} iconClass={item.iconClass} key={i} pathurl={item.pathurl} />)}
     </div>
 }
