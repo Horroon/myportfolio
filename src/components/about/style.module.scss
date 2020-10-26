@@ -2,6 +2,7 @@
     font-size: 45px !important;
     margin-left: -14px;
     color: white;
+    width: auto !important;
 }
 .abt-me-mn-dv{
     text-align: center;
@@ -14,6 +15,15 @@
     padding-top: 0px;
     padding-left: 50px;
     padding-right: 50px;
+}
+.rmw-dflt-lnk-prpty{
+    width: auto !important;
+    text-decoration: none;
+    color:inherit;
+    &:hover{
+        color: inherit;
+        text-decoration: none;
+    }
 }
 .abt-icn-mn-dv{
     width: 50%;

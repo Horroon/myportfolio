@@ -1,0 +1,31 @@
+{
+    "component":"FOOTER",
+    "Items" :[
+        {
+            "iconClass": "fa fa-map-marker",
+            "title": "Abode",
+            "desc": "<a class=address-link href=https://www.mtbc.com target=_black>Medical Transcription and Billing Corporation Inc.</a> 6th Road, Rawalpindi, Pakistan"
+        },
+        {
+            "iconClass": "fa fa-globe",
+            "title": "Venue",
+            "desc": "My base is at an indoor venue in Dhussi, and I took it outdoors in late august 2015"
+        },
+        {
+            "iconClass": "fa fa-cogs",
+            "title": "Milieu",
+            "desc": "Comfortable,restful and pleasent environment always keeps fit."
+        },
+        {
+            "iconClass": "fa fa-share-alt",
+            "title": "Follow On",
+            "desc": "<div class=ftr-social-icon-tab><div class=accnticn-dv><a href=https://web.facebook.com/haroonrasheed.valient class='fa fa-facebook' target=_black></a></div><div class=accnticn-dv><a href=https://twitter.com/Horroon class='fa fa-twitter' target=_black> </a></div><div class=accnticn-dv><a href=https://www.instagram.com/horroona/ class='fa fa-instagram' target=_black></a></div></div>"
+        }
+    
+    ],
+    "owner":{
+        "name":"Haroon Rasheed",
+        "year":"2020"
+    }
+    
+}

@@ -5,9 +5,9 @@ import { Mixpanel } from '../constants/index';
 import { loginInformation } from './login';
 
 const logger = _ => {
-    if (process.env.NODE_ENV === 'production') {
-        return LogRocket.reduxMiddleware();
-    }
+    // if (process.env.NODE_ENV === 'production') {
+    //     return LogRocket.reduxMiddleware();
+    // }
     return createLogger({ collapsed: (getState, action, logEntry) => !logEntry.error });
 };
 

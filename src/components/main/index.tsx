@@ -1,6 +1,6 @@
 import React from 'react';
-import { SchemaParser } from '../../services/schemaParser';
-import Footer from '../footer/index';
+import SchemaParser from '../../services/schemaParser';
+import {LoadHeaderData, LoadFooterData} from '../../database/index';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
@@ -14,7 +14,7 @@ const RouterComponent = () => {
     return (
         <Router>
             <div style={{ background: '#151515' }}>
-                <SchemaParser schema={{ component: "HEADER", item: { news: "Working At MTBC Since 18 Feb, 2020", uicomponents: [{ link: '/', text: 'Home' }, { link: '/favorite', text: 'Favorite' }, { link: '/contactme', text: 'Contact' }, { link: '/faq', text: 'FAQ' }] } }} />
+                <SchemaParser schema={LoadHeaderData()} />
                 <Switch>
                     <Route path="/" exact >
                         <SchemaParser schema={{ component: "HOME" }} />
@@ -38,7 +38,7 @@ const RouterComponent = () => {
                         <SchemaParser schema={{component:"DETAIL"}} />
                     </Route>
                 </Switch>
-                <Footer />
+                <SchemaParser schema={LoadFooterData()} />
                 <ToastContainer />
             </div>
         </Router>)

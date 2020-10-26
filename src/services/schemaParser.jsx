@@ -14,16 +14,16 @@ import {
     Picture,
     AcountInfo,
 } from '../components/index';
+import {ContentPage} from '../contentpage/index';
 
 
-
- export const SchemaParser = ({schema})=>{
+ const SchemaParser = ({schema})=>{
     const components = {
-        HOME: _=><Home  />,
+        HOME: _=><Home />,
         FAVOURITE:_=><Favourite />,
         PROFILE:_=><MainProfile />,
         HEADER:_=><Header {...schema.item} />,
-        FOOTER:_=><Footer />,
+        FOOTER:_=><Footer {...schema} />,
         GALLERY:_=><GalleryMainComponent />,
         ABOUTME: _=><AboutMe />,
         CONTACT: _=><Contact />,
@@ -33,6 +33,7 @@ import {
         PICTURES:_=><Picture />,
         SIMPLEINFO:_=><AcountInfo />
     }
-     const Screen = components[schema.component];
-     return <Screen />
+     const Screen = components[schema.component]
+     return ContentPage({Component:Screen})
  }
+export default SchemaParser 

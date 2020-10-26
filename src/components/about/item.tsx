@@ -10,7 +10,7 @@ const Item: React.FC<ItemFace> = (props): JSX.Element => {
         <div>
             <h4 className={styles.uppercase}>{props.title}</h4>
         </div>
-        <div className={`${styles["abt-icn-mn-dv"]}`}>
+        <div className={styles['abt-icn-mn-dv']}>
             <Link to={props.pathurl} className={`${styles["rmw-dflt-lnk-prpty"]}`}>
                 <i className={`${props.iconClass} ${styles["abt-me-lg-icn"]}`} />
             </Link>

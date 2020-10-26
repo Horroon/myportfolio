@@ -1,0 +1,12 @@
+{
+    "component": "HEADER", 
+    "item": { 
+        "news": "We think, mistakenly, that success is the result of the amount of time we put in at work, instead of the quality of time we put in. ~ Ariana Huffington,", 
+        "uicomponents": [
+                { "link": "/", "text": "Home" },
+                { "link": "/favorite", "text": "Favorite" },
+                { "link": "/contactme", "text": "Contact" },
+                { "link": "/faq", "text": "FAQ" }
+            ] 
+        }
+}

@@ -1,8 +1,9 @@
 import React from 'react';
-import {SchemaParser} from '../../services/schemaParser';
+import SchemaParser from '../../services/schemaParser';
+import './style.scss';
 
-import './style.scss'
-export const Home = (): JSX.Element => {
+export const Home = (props:{loginData:''}): JSX.Element => {
+    console.log('Props in Home ',props)
     return <div>
             <div className="row hm-rw-1">
                 <div className="col-lg-6 slidr-clm">

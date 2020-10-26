@@ -28,7 +28,7 @@ const Photo: React.FC = (): JSX.Element => {
                     <p>{item.desc}</p>
                 </div>
                 <div>
-                    <button className="btn btn-primary btn-cstm-cls">View</button>
+                    <button className="btn btn-secondary btn-sctm-style">View</button>
                 </div>
             </div>
         })}
