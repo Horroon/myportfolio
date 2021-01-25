@@ -3,8 +3,8 @@ import SchemaParser from '../../services/schemaParser';
 import './style.scss';
 
 export const Home = (props:{loginData:''}): JSX.Element => {
-    console.log('Props in Home ',props)
-    return <div>
+    console.log("Envirnment ", process.env.REACT_APP_NODE_ENV)
+    return<div>
             <div className="row hm-rw-1">
                 <div className="col-lg-6 slidr-clm">
                     <SchemaParser schema={{component:"PSLIDER"}} />
@@ -22,5 +22,4 @@ export const Home = (props:{loginData:''}): JSX.Element => {
 
     </div>
 }
-
 export default Home

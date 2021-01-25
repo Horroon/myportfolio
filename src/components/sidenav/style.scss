@@ -1,0 +1,84 @@
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333030;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenavclose{
+    width: 0px;
+}
+.sidenavopen{
+  width: 250px
+}
+.sidenav {
+  & .sidenavprofiledv{
+    padding: 15px;
+    color: burlywood;
+    & img{
+      height: 123px;
+      width: 123px;
+      border-radius: 100px;
+      padding: 4px;
+      border: 2px solid;
+    }
+    & h5{
+      padding: 10px;
+    }
+  }
+  & a{
+      padding: 8px 8px 8px 12px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+      & div{
+        display: flex;
+        justify-content: space-between;
+        justify-content: space-between;
+        background: black;
+        border-radius: 5px;
+        padding: 10px;
+        & i{
+          padding: 2px;
+          font-size: 22px;
+          width: 30px;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 4px;
+          color: white;
+          margin-top: 1px;
+        }
+        & a{
+          padding: 0px;
+          width: 100%;
+          padding-left: 18px;
+          font-size: 18px;
+          font-weight: 700;
+          color: white;
+        }
+      }
+    }
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

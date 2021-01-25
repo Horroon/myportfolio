@@ -1,7 +1,7 @@
 import {Home} from './home/index';
 import {Favourite} from './favourite/index';
 import {Footer} from './footer/index';
-import {Header} from './header/index';
+import Header from './header/index';
 import {MainProfile} from './profile/index';
 import {GalleryMainComponent} from './gallery/index';
 import {Contact} from './contact/index';
@@ -11,6 +11,7 @@ import {P_Slider} from './p_slider/index';
 import {AboutMain} from './about/index';
 import {Picture} from './photos/index';
 import {AcountInfo} from './account/index';
+import {SideNav} from './sidenav'
 
 export {
     Home,
@@ -25,5 +26,6 @@ export {
     P_Slider,
     AboutMain,
     Picture,
-    AcountInfo
+    AcountInfo,
+    SideNav
 }

@@ -9,38 +9,20 @@ import {
     Switch,
     Route
 } from "react-router-dom";
+import {PATHS} from './routes';
 
-const RouterComponent = () => {
-    return (
+const RightPath = ({path = '/', component="HOME"})=>
+    <Route path={path} exact >
+        <SchemaParser schema={{ component }} />
+    </Route>
+
+const RouterComponent = () =>(
         <Router>
             <div style={{ background: '#151515' }}>
                 <SchemaParser schema={LoadHeaderData()} />
-                <Switch>
-                    <Route path="/" exact >
-                        <SchemaParser schema={{ component: "HOME" }} />
-                    </Route>
-                    <Route path="/favorite" exact>
-                        <SchemaParser schema={{ component: "FAVOURITE" }} />
-                    </Route>
-                    <Route path="/myprofile" exact>
-                        <SchemaParser schema={{ component: "PROFILE" }} />
-                    </Route>
-                    <Route path="/gallery" exact>
-                        <SchemaParser schema={{ component: "GALLERY" }} />
-                    </Route>
-                    <Route path="/contactme" exact>
-                        <SchemaParser schema={{ component: "CONTACT" }} />
-                    </Route>
-                    <Route path="/aboutme" exact>
-                        <SchemaParser schema={{ component: "ABOUTME" }} />
-                    </Route>
-                    <Route path="/detail" exact>
-                        <SchemaParser schema={{component:"DETAIL"}} />
-                    </Route>
-                </Switch>
+                    {PATHS.map(path=><RightPath path={path.path} component={path.component} />)}
                 <SchemaParser schema={LoadFooterData()} />
                 <ToastContainer />
             </div>
         </Router>)
-}
 export default RouterComponent
