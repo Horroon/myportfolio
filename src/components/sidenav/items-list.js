@@ -57,7 +57,6 @@ const LIST = [
 ]
 
 function SideNavItems({props:{component,store}}){
-    debugger
     return LIST.map(item=> <Link 
             to={item.path} 
             className={component.path == item.path?"selectedItemrightborder":'norightborder'}
