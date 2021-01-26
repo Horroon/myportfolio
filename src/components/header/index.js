@@ -15,7 +15,7 @@ export const Header = (props) => {
         <div className="nv-bdy">
             <div className="nv-brnd-dv">
                 <Link className="navbar-brand brnd-txt-size uppercase" to="/"><img src={logo} className="hdr-lgo" onClick={()=>{
-                     store.dispatch.SideNav.open({isOpen: true, component:{path:"/"}})
+                     store.dispatch.SideNav.open({isOpen: true})
                     }} /> Software Engineer</Link>
             </div>
             <div className="marq-parent-dv" dangerouslySetInnerHTML={{__html:`<marquee class="marqueeStyle uppercase">${news}</marquee>`}}></div>
