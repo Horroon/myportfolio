@@ -1,9 +1,10 @@
 export const SideNav = {
     state: {
-        isOpen: false
+        isOpen: false,
+        component:{path:'/'}
     },
     reducers: {
-        open: (state, payload) => ({ ...state, ...{isOpen: payload} }),
+        open: (state, payload) => ({ ...state, ...payload }),
         close: (state) => ({ ...state, isOpen: false })
     }
 };

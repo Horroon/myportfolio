@@ -3,7 +3,7 @@ $items-background: black;
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 16;
   top: 0;
   left: 0;
   background-color: #333030;
@@ -24,6 +24,13 @@ $items-background: black;
 ::-webkit-scrollbar-thumb{
   background: #ada6a6;
   border-radius: 5px
+}
+
+.selectedItemrightborder{
+  border-right: 3px solid wheat;
+}
+.norightborder{
+  border-right: 0px;
 }
 
 .sidenav {
