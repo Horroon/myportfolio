@@ -16,5 +16,11 @@ export const SideNav = ({isOpen:{isOpen}})=>{
             </div>
         </div>
         <Items />
+        <footer>
+            <div className="footer-copyright text-center py-3 sidnv-cprt">
+                © 2021:
+                <p className="address-link"> Haroon Rasheed</p>
+            </div>
+        </footer>
 </div>   
 }

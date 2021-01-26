@@ -1,3 +1,4 @@
+$items-background: black; 
 .sidenav {
   height: 100%;
   width: 0;
@@ -16,10 +17,22 @@
 .sidenavopen{
   width: 250px
 }
+
+::-webkit-scrollbar{
+  width: 2px;
+}
+::-webkit-scrollbar-thumb{
+  background: #ada6a6;
+  border-radius: 5px
+}
+
 .sidenav {
+  padding-top: 0px;
+  
   & .sidenavprofiledv{
     padding: 15px;
     color: burlywood;
+    background-color: $items-background;
     & img{
       height: 123px;
       width: 123px;
@@ -32,7 +45,7 @@
     }
   }
   & a{
-      padding: 8px 8px 8px 12px;
+      padding: 2px 0px 0px 0px;
       text-decoration: none;
       font-size: 25px;
       color: #818181;
@@ -42,8 +55,7 @@
         display: flex;
         justify-content: space-between;
         justify-content: space-between;
-        background: black;
-        border-radius: 5px;
+        background: $items-background;
         padding: 10px;
         & i{
           padding: 2px;
@@ -64,7 +76,14 @@
           color: white;
         }
       }
-    }
+    };
+    & footer {
+      padding-top: 2px;
+      & .sidnv-cprt {
+        background: $items-background;
+        color: white;
+      }
+   }
 }
 .sidenav a:hover {
   color: #f1f1f1;
