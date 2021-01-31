@@ -20,7 +20,9 @@ const RouterComponent = () =>(
         <Router>
             <div style={{ background: '#151515' }}>
                 <SchemaParser schema={LoadHeaderData()} />
-                    {PATHS.map(path=><RightPath path={path.path} component={path.component} />)}
+                    <div style={{minHeight: '100vh'}}>
+                        {PATHS.map(path=><RightPath path={path.path} component={path.component} />)}
+                    </div>
                 <SchemaParser schema={LoadFooterData()} />
                 <ToastContainer />
             </div>

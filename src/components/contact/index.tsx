@@ -1,6 +1,8 @@
 import React, { useState, useReducer } from "react";
 import FormInput from './inputField';
 import { toast } from 'react-toastify'
+import {store} from '../../models/index';
+import { HeaderClasses } from '../../constants/headers-classes'
 import './style.scss'
 
 interface stateFace {
@@ -38,6 +40,11 @@ export const Contact: React.FC = (): JSX.Element => {
         if (state.fname && state.lname && state.email && state.message) toast.success("Thank You")
         else toast.error("Please enter value")
     }
+
+    React.useEffect(()=>{
+        store.dispatch.headerInformation.updateheaderclasses({headerclasses: HeaderClasses.scollheader})
+    },[])
+
     return <div>
         <div className="container-fluid" style={{ padding: '4%' }}>
             <div className="cntct-mn-dv" >

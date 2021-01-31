@@ -1,7 +1,7 @@
 import React from 'react';
 import Items from './items-list';
 import './style.scss';
-import Profile from '../../assets/account_p.webp';
+import Profile from '../../assets/p-site-logo.png';
 
 export const SideNav = ({props:{isOpen, component, store}})=>{
  return <div id="mySidenav" className={`${isOpen?"sidenavopen":"sidenavclose"} sidenav`}>

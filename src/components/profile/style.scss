@@ -5,13 +5,24 @@
     background: url('../../assets/bg.jpg');
     background-size: cover;
     width: 100%;
+    height: 80vh;
 }
 .covwe-inn{
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 100%;
-    padding: 85px;
-    display: flex;
+    display: grid;
+    & .row {
+        justify-content: center;
+        align-self: center;
+        & .prf-contnr{
+            justify-content: center;
+            align-self: center;
+            & .pf-img{
+                text-align: center
+            }
+        }
+    }
 }
 .pf-img{
     width: 100%;

@@ -1,9 +1,10 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {Link,withRouter} from 'react-router-dom'
+
 const LIST = [
     {
         name:"Home",
-        path:"/",
+        path:"/home",
         label:"Home",
         icon:'fa fa-home',
     },
@@ -56,14 +57,15 @@ const LIST = [
     },
 ]
 
-function SideNavItems({props:{component,store}}){
+function SideNavItems(props){
+    const {location:{pathname}} = props;
+    const currentPath = pathname === '/'?'/home':pathname
     return LIST.map(item=> <Link 
-            to={item.path} 
-            className={component.path == item.path?"selectedItemrightborder":'norightborder'}
-            onClick={()=>store.dispatch.SideNav.open({component:{path: item.path}})}
+            to={item.path==='/home'?'/':item.path} 
+            className={ currentPath.includes(item.path)?"selectedItemrightborder":'norightborder'}
         >
        <div> <i className={item.icon} /><a href="#">{item.label}</a></div>
     </Link>)
 }
 
-export default SideNavItems
+export default withRouter(SideNavItems)

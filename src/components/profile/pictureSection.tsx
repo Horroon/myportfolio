@@ -5,12 +5,12 @@ const PictureSection: React.FC = (): JSX.Element => {
         <div className="pfl-bg-dv" id="pfl-bg-dv">
             <div className="covwe-inn">
                 <div className="row" style={{ margin: 0 }}>
-                    <div className="col-lg-2">
+                    <div className="col-lg-2 w3-container  w3-animate-left prf-contnr">
                         <div className="pf-img">
                             <img src={Profile} className="prfl-phto" />
                         </div>
                     </div>
-                    <div className="col-lg-8">
+                    <div className="col-lg-8 w3-container w3-animate-top">
                         <div className="prf-tx">
                             <div>
                                 <h3>Haroon Rasheed / Developer For React Technologies</h3>

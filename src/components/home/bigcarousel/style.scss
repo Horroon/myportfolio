@@ -1,0 +1,39 @@
+.big-carousel{
+    background: url('https://source.unsplash.com/1600x900/?nature,water');
+    height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+
+    & div{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        padding-left: 140px;
+        width: 90%;
+        & .hm-description{
+            & p{
+                width: 100%;
+                color: white;
+                transition: 1s;
+            }
+        }
+        & .hm-bg-dp{
+            & img{
+                height: inherit;
+                transition: 1s;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 900px){
+    .big-carousel {
+        & div{
+            padding-left: 10px;
+            & .hm-bg-dp{
+                display: none
+            }
+        }
+    }
+}

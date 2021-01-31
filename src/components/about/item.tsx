@@ -6,7 +6,7 @@ import styles from './style.module.scss';
 
 const Item: React.FC<ItemFace> = (props): JSX.Element => {
 
-    return <div className={`col-lg-3 ${styles["abt-me-mn-dv"]}`}>
+    return <div className={`col-lg-3 ${styles["abt-me-mn-dv"]} w3-container w3-center w3-animate-top`}>
         <div>
             <h4 className={styles.uppercase}>{props.title}</h4>
         </div>

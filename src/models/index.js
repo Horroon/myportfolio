@@ -3,6 +3,7 @@ import { createLogger } from 'redux-logger';
 import { LogRocket } from "logrocket";
 import { loginInformation } from './login';
 import {SideNav} from './sideNav';
+import {headerInformation} from './header';
 
 const logger = _ => {
     // if (process.env.NODE_ENV === 'production') {
@@ -14,7 +15,8 @@ const logger = _ => {
 export const store = init({
     models: {
         loginInformation,
-        SideNav
+        SideNav,
+        headerInformation,
     },
     redux: {
         middlewares: [

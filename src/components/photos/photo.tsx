@@ -20,7 +20,7 @@ const Photo: React.FC = (): JSX.Element => {
 
     return <div className="row phto-mn-dv">
         {photos.map((item) => {
-            return <div className="col-lg-3 phto-itm-1 phto-itm">
+            return <div className="col-lg-3 phto-itm-1 phto-itm w3-container w3-center w3-animate-bottom">
                 <div className="photo-img-dv">
                     <img src={item.img} className="pic-dv" draggable={false} />
                 </div>
