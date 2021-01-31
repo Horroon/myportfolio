@@ -11,7 +11,8 @@ import {P_Slider} from './p_slider/index';
 import {AboutMain} from './about/index';
 import {Picture} from './photos/index';
 import {AcountInfo} from './account/index';
-import {SideNav} from './sidenav'
+import {SideNav} from './sidenav';
+import {Services} from './services/index';
 
 export {
     Home,
@@ -27,5 +28,6 @@ export {
     AboutMain,
     Picture,
     AcountInfo,
-    SideNav
+    SideNav,
+    Services
 }

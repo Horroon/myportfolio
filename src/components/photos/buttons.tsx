@@ -6,7 +6,7 @@ interface buttonFace {
     text: string
 }
 
-const buttons: Array<buttonFace> = [{ link: "/", text: "Home" }, { link: "/myprofile", text: "Profile" }, { link: "/favorite", text: "Favorite" }]; //{ link: "/services", text: "Services" }
+const buttons: Array<buttonFace> = [{ link: "/", text: "Home" }, { link: "/myprofile", text: "Profile" }, { link: "/services", text: "Services" }]; //{ link: "/services", text: "Services" }
 
 const Buttons = (): JSX.Element => {
     return <div className="col-lg-12 btn-mn-dv w3-animate-left">

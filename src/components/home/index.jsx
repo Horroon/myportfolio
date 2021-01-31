@@ -9,7 +9,7 @@ import './style.scss';
 export const Home = (props) => {
     const keepEyeOnScroll = ()=> handleHeaderWithScroll(store)
     useEffect(()=>{
-        store.dispatch.headerInformation.updateheaderclasses({headerclasses: HeaderClasses.stickytransparentHeader})
+        keepEyeOnScroll(store)
         window.addEventListener('scroll',keepEyeOnScroll)
        return ()=>{
         window.removeEventListener('scroll', keepEyeOnScroll)

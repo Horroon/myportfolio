@@ -1,6 +1,6 @@
 export const PATHS =[
     {path:'/', component:"HOME"},
-    {path:'/favorite', component:"FAVOURITE"},
+    {path:'/services', component:"SERVICES"},
     {path:'/myprofile', component:"PROFILE"},
     {path:'/gallery', component:"GALLERY"},
     {path:'/contactme', component:"CONTACT"},

@@ -13,6 +13,7 @@ import {
     AboutMain,
     Picture,
     AcountInfo,
+    Services
 } from '../components/index';
 import {ContentPage} from '../contentpage/index';
 
@@ -31,7 +32,8 @@ import {ContentPage} from '../contentpage/index';
         PSLIDER: _=><P_Slider />,
         ABOUTSECTION:_=><AboutMain />,
         PICTURES:_=><Picture />,
-        SIMPLEINFO:_=><AcountInfo />
+        SIMPLEINFO:_=><AcountInfo />,
+        SERVICES: _=> <Services />
     }
      const Screen = components[schema.component]
      return ContentPage({Component:Screen})

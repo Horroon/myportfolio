@@ -29,7 +29,7 @@ export const Header = (props) => {
                     <ul className="navbar-nav mr-auto ul-dv ui-item-dv">
                         {
                             uicomponents.map((item, index) => <li className="nav-item hvr-cls hdr-lst-itm" key={index}>
-                                <Link className="nav-link hdr-cstm-dv uppercase" to={item.link}>{item.text}</Link>
+                                <Link className="nav-link hdr-cstm-dv uppercase w3-animate-top" to={item.link}>{item.text}</Link>
                             </li>)
                         }
                     </ul>

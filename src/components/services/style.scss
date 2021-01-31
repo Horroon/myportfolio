@@ -1,0 +1,51 @@
+.services-container{
+    & .service-logo-main{
+        background: url('https://source.unsplash.com/1600x900/?nature,dark,day,rain');
+        height: 90vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        & .img-detail-tg{
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            color: white;
+            background: linear-gradient(45deg,#00000029, #00000012);
+            padding: 36px;
+            font-family: serif;
+            & img{
+                height: 135px;
+            }
+            & h4{
+                font-size: 20px;
+            }
+        }
+    };
+    & div{
+        & .service-hd-tg{
+            width: 20%;
+            margin: auto;
+            text-align: center;
+            padding: 34px;
+            color: white
+        }
+        & .services-tg{
+            padding: 20px;
+            & .row{
+                margin: 0px;
+                & .card{
+                    margin: 20px;
+                    text-align: center;
+                    & .card-body{
+                        background: black;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

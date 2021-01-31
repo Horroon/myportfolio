@@ -40,3 +40,57 @@
      box-shadow: 0px 1px 10px 10px #17a2b88c;
      font-family: fantasy;
 }
+
+.contact-main{
+    background: url('https://source.unsplash.com/1600x900/?nature,water');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .contme-hding{
+        & p{
+            text-align: center;
+            color: white;
+            width: 80%;
+            margin: auto;
+        }
+    };
+    & .addrss-mn-dv{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        & .location-hd{
+            display: flex;
+            background: linear-gradient(45deg, #00000066, #00000045);
+            margin: auto;
+            color: white;
+            padding: 10px;
+            width: 70%;
+            margin-top: 3%; 
+            & p{
+                padding-left: 20px;
+                & h4{
+                    font-size: 16px;
+                }
+            }
+            & h4{
+                & i{
+                    padding: 6px;
+                    color: black;
+                    font-size: 35px;
+                    height: 48px;
+                    width: 48px;
+                    background: white;
+                    text-decoration: none;
+                    border-radius: 25px;
+                    margin: 5px 2px;
+                }
+            }
+        }
+    }
+}
