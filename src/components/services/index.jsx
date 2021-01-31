@@ -37,7 +37,7 @@ const Services = ()=>{
                 <div className="row">
                     {
                         [{
-                            title:"Website developement", 
+                            title:"Website development", 
                             desc:"I provide single page web applications in react, angularjs or vue. But prefer to work with react.",
                             img:webdev,
                         },{
