@@ -36,29 +36,58 @@ export const Contact = () => {
             <div className="contme-hding w3-animate-right">
                 <p>
                     <h4>Contact me</h4>
-                    <h5>I will appreciate your valuable opinions and your time for contacting to discuss any question you feel harder to understand me.</h5>
+                    <h6>I will appreciate your valuable opinions and your time for contacting to discuss any question you feel harder to understand me.</h6>
                 </p>
             </div>
             <p className="row addrss-mn-dv">
               <div className="col-lg-6 col-sm-12 w3-animate-left">
-                  {
-                      [
-                          {name:"Address", detail:"Satellite Town 6th Road, Rawalpindi.", icon:"fa fa-map-marker"},
-                          {name:"Phone", detail:"+92-349-5049558", icon:"fa fa-phone"},
-                          {name:"Email", detail:"horroona@gmail.com", icon:"fa fa-envelope"}
-                      ].map(item=> (<div className="location-hd">
-                                    <h4>
-                                        <i className={item.icon} />
-                                    </h4>
-                                    <p>
-                                        <h3>{item.name}</h3>
-                                        <h4>{item.detail}</h4>
-                                    </p>
-                                </div>)
-                            )
-                  }
+                 <div>
+                    {
+                        [
+                            {name:"Address", detail:"Satellite Town 6th Road, Rawalpindi.", icon:"fa fa-map-marker"},
+                            {name:"Phone", detail:"+92-349-5049558", icon:"fa fa-phone"},
+                            {name:"Email", detail:"horroona@gmail.com", icon:"fa fa-envelope"}
+                        ].map(item=> (<div className="location-hd">
+                                        <h4>
+                                            <i className={item.icon} />
+                                        </h4>
+                                        <p>
+                                            <h5>{item.name}</h5>
+                                            <h6>{item.detail}</h6>
+                                        </p>
+                                    </div>)
+                                )
+                    }
+                  </div>
                 </div>
-                <div className="col-lg-6 col-sm-12">Forms</div>
+                <div className="col-lg-6 col-sm-12">
+                  <div className="contact-form w3-animate-bottom">
+                      <form>
+                            <div>
+                                <h3>Send Message</h3>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12 input-col">
+                                 <input type="text" class="form-control" id="staticEmail" placeholder="Full Name" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12 input-col">
+                                    <input type="email" class="form-control" id="inputPassword" placeholder="Email" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12 input-col">
+                                    <textarea type="textarea" rows="3" class="form-control" id="inputPassword" placeholder="Type message..." />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button className="btn btn-md btn-outline-success">Send message</button>
+                            </div>
+                            
+                      </form>
+                  </div>
+                </div>
             </p>
     </div >
 }
