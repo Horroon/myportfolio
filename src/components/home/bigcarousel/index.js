@@ -4,7 +4,7 @@ import './style.scss';
 
 const BigCarousel = ()=>{
     return <div className="big-carousel">
-            <div>
+            <div className="big-carousel-div-1">
                     <div className="hm-description">
                         <p className="w3-animate-left"> 
                             <h4>Hello!</h4>

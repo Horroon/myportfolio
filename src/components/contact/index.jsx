@@ -33,13 +33,14 @@ export const Contact = () => {
     },[])
 
     return <div className="contact-main">
-            <div className="contme-hding w3-animate-right">
-                <p>
-                    <h4>Contact me</h4>
-                    <h6>I will appreciate your valuable opinions and your time for contacting to discuss any question you feel harder to understand me.</h6>
-                </p>
-            </div>
-            <p className="row addrss-mn-dv">
+                <div className="shadow-contact">
+                    <div className="contme-hding w3-animate-right">
+                        <p>
+                            <h4>Contact me</h4>
+                            <h6>I will appreciate your valuable opinions and your time for contacting to discuss any question you feel harder to understand me.</h6>
+                        </p>
+                    </div>
+                    <p className="row addrss-mn-dv">
               <div className="col-lg-6 col-sm-12 w3-animate-left">
                  <div>
                     {
@@ -62,7 +63,7 @@ export const Contact = () => {
                 </div>
                 <div className="col-lg-6 col-sm-12">
                   <div className="contact-form w3-animate-bottom">
-                      <form>
+                      <form action="" method="">
                             <div>
                                 <h3>Send Message</h3>
                             </div>
@@ -89,5 +90,6 @@ export const Contact = () => {
                   </div>
                 </div>
             </p>
-    </div >
+                </div >
+            </div>
 }

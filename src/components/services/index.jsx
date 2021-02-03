@@ -20,13 +20,15 @@ const Services = ()=>{
 
     return <div className="services-container">
         <div className="service-logo-main">
-            <div className="img-detail-tg">
-                <p className="w3-animate-top">
-                    <h2>
-                        <img src={serviceslogo} />
-                    </h2>
-                    <h4>My objective in life is to serve the humanity and help the folks to pick them from the mud and bring them into new era of life by providing IT services in form of software applications</h4>
-                </p>
+            <div className="shadow-div">
+                <div className="img-detail-tg">
+                    <p className="w3-animate-top aim-p">
+                        <h2>
+                            <img src={serviceslogo} />
+                        </h2>
+                        <h4>My objective in life is to serve the humanity and help the folks to pick them from the mud and bring them into new era of life by providing IT services in form of software applications</h4>
+                    </p>
+            </div>
             </div>
         </div>
         <div>

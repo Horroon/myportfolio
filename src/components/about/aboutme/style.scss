@@ -1,0 +1,95 @@
+$AboutSideNavBgColor_gray:#1a222e;
+$AboutSideNavBgColor_Cyan:#48ad7e;
+$AboutSideNavTextColor_white: #fcfcfc;
+$icon_white_color: #fcfcfc;
+$icon_green_color: #48ad7e;
+$icon_green_background_color: #48ad7e; 
+$icon_white_background_color: #48ad7e; 
+
+.about-main{
+    display: flex;
+    & .about-sidenav{
+        width: 250px;
+        min-height: 100vh;
+        background: $AboutSideNavBgColor_Cyan;
+        text-align: center;
+        padding: 20px;
+        color: #fcfcfc;
+        & .about-sidenav-main{
+            display: flex;
+            flex-direction: column;
+            height: inherit;
+            & .personal-info{
+                border-bottom: 1px solid gray;
+                & div{
+                    padding: 4px;
+                }
+                & .profile-dv{
+                    & img{
+                        width: 110px;
+                        height: 110px;
+                        border-radius: 55px;
+                    }
+                }
+                & .profile-dv-txt{
+                    & h6{
+                        line-height: 1.4
+                    }
+                }
+                & .link-parent{
+                    & div{
+                        display: flex;
+                        justify-content: space-around;
+                        margin: auto;
+                        & div{
+                            & i{
+                                height: 32px;
+                                width: 32px;
+                                border-radius: 16px;
+                                padding: 5px;
+                                background: #fcfcfc;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            };
+            & .pages-section{
+                border-bottom: 1px solid gray;  
+                & div{
+                    padding: 4px;
+                }
+                & .pages-section-1{
+                    & .pages-section-1-1{
+                        & .pages-items-parent{
+                            width: 100%;
+                            padding-top: 10px;
+                            margin: auto;
+                            & div{
+                                width: 90%;
+                                margin:auto;
+                                padding: 5px;
+                                text-align: start;
+                                cursor: pointer;
+                            }
+                        }
+                        
+                    }& .pages-section-hire{
+                        padding: 20px; 
+                    }
+                }
+            }
+            & .mode-section{
+                & div{
+                    padding: 4px;
+                    & h6{
+                        margin-top: 36px;
+                    }
+                }
+            }
+        }
+        & .about-description-side{
+            border-bottom: 1px solid gray;
+        }
+    } 
+}

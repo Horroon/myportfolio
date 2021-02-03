@@ -7,21 +7,29 @@
         background-position-x: center;
         background-position-y: center;
         display: grid;
-        justify-content: center;
-        align-items: center;
-        & .img-detail-tg{
-            width: 50%;
-            margin: auto;
-            text-align: center;
-            color: white;
-            background: linear-gradient(45deg,#00000029, #00000012);
-            padding: 36px;
-            font-family: serif;
-            & img{
-                height: 135px;
-            }
-            & h4{
-                font-size: 20px;
+        & .shadow-div{
+            background: linear-gradient(45deg, #00000069, #00000070);
+            justify-content: center;
+            align-items: center;
+            & .img-detail-tg{
+                width: 50%;
+                margin: auto;
+                text-align: center;
+                display: flex;
+                color: white;
+                font-family: serif;
+                height: 100%;
+                & .aim-p{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    & img{
+                        height: 135px;
+                    }
+                    & h4{
+                        font-size: 20px;
+                    }
+                }
             }
         }
     };

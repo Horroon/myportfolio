@@ -6,19 +6,22 @@
     background-position-x: center;
     background-position-y: center;
 
-    & div{
+    & .big-carousel-div-1{
         display: flex;
         height: 100%;
         align-items: center;
-        padding-left: 140px;
         width: 100%;
+        background: linear-gradient(
+            45deg
+            , #00000085, #00000078);
         & .hm-description{
+            padding-left: 140px;
+            width: 50%;
             & p{
                 width: 100%;
                 color: white;
                 font-family: 'Times New Roman', Times, serif;
                 transition: 1s;
-                background: linear-gradient(45deg, #00000029, #00000012);
                 padding: 16px;
                 align-self: center;
                 & .intro-tg{
@@ -32,6 +35,9 @@
             }
         }
         & .hm-bg-dp{
+            background: transparent;
+            justify-content: center;
+            height: inherit;
             & img{
                 height: inherit;
                 transition: 1s;
@@ -41,8 +47,11 @@
 }
 @media only screen and (max-width: 900px){
     .big-carousel {
-        & div{
-            padding-left: 10px;
+        & .big-carousel-div-1{
+            & .hm-description{
+                width: 100%;
+                padding: 0px;
+            }
             & .hm-bg-dp{
                 display: none
             }
