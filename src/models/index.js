@@ -4,6 +4,8 @@ import { LogRocket } from "logrocket";
 import { loginInformation } from './login';
 import {SideNav} from './sideNav';
 import {headerInformation} from './header';
+import {aboutMe} from './about';
+import {mode} from './mode';
 
 const logger = _ => {
     // if (process.env.NODE_ENV === 'production') {
@@ -17,6 +19,8 @@ export const store = init({
         loginInformation,
         SideNav,
         headerInformation,
+        aboutMe,
+        mode
     },
     redux: {
         middlewares: [

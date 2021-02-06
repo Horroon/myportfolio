@@ -5,7 +5,7 @@ import Header from './header/index';
 import {MainProfile} from './profile/index';
 import {GalleryMainComponent} from './gallery/index';
 import {Contact} from './contact/index';
-import {AboutMe} from './about/aboutme/index';
+import AboutMe from './about/aboutme/index';
 import {Detail} from './favourite/detail/index';
 import {P_Slider} from './p_slider/index';
 import {AboutMain} from './about/index';

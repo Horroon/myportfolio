@@ -36,7 +36,7 @@ export const Contact = () => {
                 <div className="shadow-contact">
                     <div className="contme-hding w3-animate-right">
                         <p>
-                            <h4>Contact me</h4>
+                            <h4>Contact Me</h4>
                             <h6>I will appreciate your valuable opinions and your time for contacting to discuss any question you feel harder to understand me.</h6>
                         </p>
                     </div>
