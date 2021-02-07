@@ -6,15 +6,30 @@ $icon_white_color: #fcfcfc;
 $icon_green_color: #48ad7e;
 $icon_green_background_color: #48ad7e; 
 $icon_white_background_color: #fcfcfc; 
+$AboutBodyBgColorWhite: #fcfcfc;
+$commonTransition: 0.5s;
 
+@mixin giveBodyBg($isDarkMode) {
+    @if $isDarkMode {
+        background: black;
+        color: #fcfcfc;
+        transition: $commonTransition;
+    }@else{
+        background: $AboutBodyBgColorWhite;
+        color: #1a222e;
+        transition: $commonTransition;
+    }
+}
 @mixin giveSideNavMode($isDarkMode){
     @if $isDarkMode {
         background: $AboutSideNavBgColor_gray;
         color: $AboutSideNavTextColor_in_graymode;
+        transition: $commonTransition;
     }
     @else{
         background: $AboutSideNavBgColor_Cyan;
-        color: $AboutSideNavTextColor_white;
+        color: $AboutSideNavTextColor_white;;
+        transition: $commonTransition;
     }
 }
 @mixin givePersonalInfo_IconMode($isDarkMode) {
@@ -23,6 +38,7 @@ $icon_white_background_color: #fcfcfc;
            & i{
             background: $icon_green_background_color;
             color: $icon_white_color;
+            transition: $commonTransition;
           }
         };
     }
@@ -31,6 +47,7 @@ $icon_white_background_color: #fcfcfc;
             & i{
                 background: $icon_white_background_color;
                 color: $icon_green_color;
+                transition: $commonTransition;
             }
         };
     }
@@ -87,6 +104,7 @@ $icon_white_background_color: #fcfcfc;
                                     border-radius: 16px;
                                     padding: 7px;
                                     cursor: pointer;
+                                    transition: 0.5s;
                                 }
                             }
                         }
@@ -129,9 +147,15 @@ $icon_white_background_color: #fcfcfc;
             & .about-description-side{
                 border-bottom: 1px solid gray;
             }
-        }
+        };
+        & .about_body_bg-dark-mode{
+            @include giveBodyBg($isDarkMode:true)
+        };
+        & .about_body_bg-white-mode{
+            @include giveBodyBg($isDarkMode:false)
+        };
         & .about-description-side{
-            background: white;
+            
             padding: 0px;
             & .body-personal-info{
               display: flex;
@@ -156,9 +180,12 @@ $icon_white_background_color: #fcfcfc;
                 width: 50%;
                 height: inherit;
                 & .body-personal-info-profile-img-parent{
-                    height: inherit;
+                    height: 100%;
+                    width: 50%;
+                    margin: auto;
                     & img{
-                        height: 30vh;
+                        height: 218px;
+                        width: 100%;
                     }
                 }  
               }  
@@ -186,6 +213,7 @@ $icon_white_background_color: #fcfcfc;
                         & .skill-card{
                             & .card{
                                 border: 0px solid;
+                                background: transparent;
                             }
                         }
                     }
