@@ -54,6 +54,9 @@ $commonTransition: 0.5s;
 }
 .about-main{
     display: flex;
+    & button{
+        font-weight: bold
+    }
     & .row{
         margin: 0px;
         max-width: 100%;
@@ -160,6 +163,8 @@ $commonTransition: 0.5s;
             & .body-personal-info{
               display: flex;
               padding: 60px;
+              padding-top: 68px;
+              padding-bottom: 68px; 
               border-bottom: 1px solid #80808052;
               & .body-personal-info-desc{
                   width: 50%;
@@ -171,7 +176,7 @@ $commonTransition: 0.5s;
                   & .body-personal-info-desc-btns{
                       & div{
                           display: flex;    
-                          width: 274px;
+                          width: 280px;
                           justify-content: space-between
                       }
                   }
@@ -180,7 +185,7 @@ $commonTransition: 0.5s;
                 width: 50%;
                 height: inherit;
                 & .body-personal-info-profile-img-parent{
-                    height: 100%;
+                    height: 128px;
                     width: 50%;
                     margin: auto;
                     & img{
