@@ -130,11 +130,23 @@ $commonTransition: 0.5s;
                                     padding: 5px;
                                     text-align: start;
                                     cursor: pointer;
+                                    & a{
+                                        color: inherit;
+                                        &:hover {
+                                            text-decoration: none;
+                                        }
+                                    }
                                 }
                             }
                             
                         }& .pages-section-hire{
                             padding: 20px; 
+                            & button{
+                                & a{
+                                    color: inherit;
+                                    text-decoration: none
+                                }
+                            }
                         }
                     }
                 }
@@ -177,7 +189,13 @@ $commonTransition: 0.5s;
                       & div{
                           display: flex;    
                           width: 280px;
-                          justify-content: space-between
+                          justify-content: space-between;
+                          & button{
+                              & a{
+                                  color: inherit;
+                                  text-decoration: none;
+                              }
+                          }
                       }
                   }
               }

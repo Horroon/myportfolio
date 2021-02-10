@@ -6,7 +6,7 @@
                 { "link": "/", "text": "Home" },
                 { "link": "/services", "text": "Services" },
                 { "link": "/contactme", "text": "Contact" },
-                { "link": "/faq", "text": "FAQ" }
+                { "link": "/aboutme", "text": "About" }
             ] 
         }
 }

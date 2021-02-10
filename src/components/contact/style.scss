@@ -68,7 +68,7 @@
                     margin: auto;
                     margin-top: 10px;
                     height: 100%;
-                    & form{
+                    & div{
                         & .form-group{
                             margin: 0px;
                             border-bottom: 1px solid darkgray;
@@ -91,6 +91,12 @@
                             & .btn{
                                 margin-top: 36px;
     
+                            }
+                            & .error-class{
+                                & p{
+                                    font-weight: bold;
+                                    color: red;
+                                }
                             }
                         }
                     }

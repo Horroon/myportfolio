@@ -7,6 +7,7 @@ import {HeaderClasses,CommonProperties} from '../../../constants';
 import { Link } from 'react-router-dom';
 import {SideBar} from './sidebar';
 import {AboutBody} from './body';
+import {PATHS} from '../../paths';
 
 export const AboutMe = (props) => {
 
@@ -18,12 +19,13 @@ export const AboutMe = (props) => {
     }
     useEffect(()=>{
         store.dispatch.headerInformation.updateheaderclasses({headerclasses: HeaderClasses.removeHeader})
+        store.dispatch.SideNav.open({isOpen: false});
     },[])
 
     return<div className="about-main">
             <div className="row">
-                <SideBar Profile={Profile} changeMode={changeMode} sidebar={sidebar} />
-                <AboutBody body={body} Profile={Profile} />
+                <SideBar Profile={Profile} changeMode={changeMode} sidebar={sidebar} PATHS={PATHS}/>
+                <AboutBody body={body} Profile={Profile} PATHS={PATHS} />
             </div>
     </div>
 }

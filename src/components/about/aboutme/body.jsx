@@ -1,6 +1,7 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
-export const AboutBody = ({body,Profile})=><div className={`col-lg-10 col-sm-12 about-description-side about_body_bg-${body.bgClass}`}>
+export const AboutBody = ({body,Profile, PATHS})=><div className={`col-lg-10 col-sm-12 about-description-side about_body_bg-${body.bgClass}`}>
 <div className="body-personal-info">
     <div className="body-personal-info-desc w3-animate-top">
         <div className="body-personal-info-desc-bio">
@@ -12,8 +13,8 @@ export const AboutBody = ({body,Profile})=><div className={`col-lg-10 col-sm-12 
         </div>
         <div className="body-personal-info-desc-btns">
             <div>
-                <button className="btn btn-success btn-sm"><i className="fa fa-cog" /><span> View services</span></button>
-                <button className="btn btn-success btn-sm"><i className="fa fa-user-circle-o" /> <span>View Resume</span></button>
+                <button className="btn btn-success btn-sm"><Link to={PATHS[1].path}><i className="fa fa-cog" /><span> View services</span></Link></button>
+                <button className="btn btn-success btn-sm"><Link to={PATHS[2].path}><i className="fa fa-user-circle-o" /> <span>View Resume</span></Link></button>
             </div>
         </div>
     </div>
@@ -24,7 +25,7 @@ export const AboutBody = ({body,Profile})=><div className={`col-lg-10 col-sm-12 
     </div>
 </div>
 <div className="body-personal-work">
-<div className="body-personal-work-whatIdo w3-animate-right">
+<div id="whatIdo" className="body-personal-work-whatIdo w3-animate-right">
     <div className="body-personal-work-hdng">
         <h4>What I do</h4>
     </div>

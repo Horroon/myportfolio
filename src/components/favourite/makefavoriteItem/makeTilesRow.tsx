@@ -76,7 +76,6 @@ const TilesRow: React.FC<TilesRowFace> = (props): JSX.Element => {
         return () => window.removeEventListener('resize', WindowUpdate)
     }, [])
 
-    console.log('scrollwidthFull', scrollFullWidth, scroll)
     return <div className="rw-cntr-fvrt">
         <div className="row" style={{ margin: 0 }}>
             <div className="tl-mn-hdng">

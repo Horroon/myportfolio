@@ -19,13 +19,12 @@
         {
             "iconClass": "fa fa-share-alt",
             "title": "Follow On",
-            "desc": "<div class=ftr-social-icon-tab><div class=accnticn-dv><a href=https://web.facebook.com/haroonrasheed.valient class='fa fa-facebook' target=_black></a></div><div class=accnticn-dv><a href=https://twitter.com/Horroon class='fa fa-twitter' target=_black> </a></div><div class=accnticn-dv><a href=https://www.instagram.com/horroona/ class='fa fa-instagram' target=_black></a></div></div>"
+            "desc": "<div class=ftr-social-icon-tab><div class=accnticn-dv><a href=https://web.facebook.com/haroonrasheed.valient class='fa fa-facebook' target=_black></a></div><div class=accnticn-dv><a href=https://twitter.com/Horroon class='fa fa-twitter' target=_black> </a></div><div class=accnticn-dv><a href=https://www.instagram.com/horroona/ class='fa fa-instagram' target=_black></a></div><div class=accnticn-dv><a href=https://www.linkedin.com/in/haroon-rasheed-5425a0127/ class='fa fa-linkedin' target=_black></a></div></div>"
         }
-    
     ],
     "owner":{
         "name":"Haroon Rasheed",
-        "year":"2020"
+        "year":"2021"
     }
     
 }

@@ -36,7 +36,6 @@ const AddUser = (): JSX.Element => {
                 firstName: state?.firstName,
                 lastName: state?.lastName
             }).then(res => {
-                console.log(res)
                 alert('Added Successfully')
             }).catch(e => {
                 console.log('Error occured', e)
@@ -46,7 +45,6 @@ const AddUser = (): JSX.Element => {
             alert('please fill data')
         }
     }
-    console.log(state)
     return (<div>
         <div>
             <div className="form-group">

@@ -9,7 +9,7 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import {PATHS} from './routes';
+import {PATHS} from '../paths';
 
 const RightPath = ({path = '/', component="HOME"})=>
     <Route path={path} exact >

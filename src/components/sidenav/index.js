@@ -6,7 +6,7 @@ import Profile from '../../assets/p-site-logo.png';
 export const SideNav = ({props:{isOpen, component, store}})=>{
  return <div id="mySidenav" className={`${isOpen?"sidenavopen":"sidenavclose"} sidenav`}>
         <div className="sidenavprofiledv">
-            <a href="#" className="closebtn" onClick={()=>store.dispatch.SideNav.close()}>&times;</a>
+            <a className="closebtn" onClick={()=>store.dispatch.SideNav.close()}>&times;</a>
             <div>
                 <div>
                     <img src={Profile} alt={"Not found"} draggable={false} />

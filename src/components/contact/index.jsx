@@ -4,7 +4,7 @@ import {store} from '../../models/index';
 import {handleHeaderWithScroll} from '../../utilities-methods/index';
 import './style.scss'
 
-const InitialState= { fname: '', lname: '', email: '', message: '' }
+const InitialState= { fname: '', lname: '', email: '', message: '', error:"" }
 
 const reducer = (state = InitialState, action) => {
     switch (action.type) {
@@ -16,13 +16,15 @@ const reducer = (state = InitialState, action) => {
             return { ...state, email: action.payload }
         case "message":
             return { ...state, message: action.payload }
+        case "error":
+            return {...state, error: action.payload}
         default:
             return { ...state }
 
     }
 }
 export const Contact = () => {
-    
+    const [State, setState] = useReducer(reducer, InitialState)
     const keepEyeOnScroll = ()=> handleHeaderWithScroll(store)
     useEffect(()=>{
         keepEyeOnScroll(store)
@@ -63,7 +65,7 @@ export const Contact = () => {
                 </div>
                 <div className="col-lg-6 col-sm-12">
                   <div className="contact-form w3-animate-bottom">
-                      <form action="" method="">
+                      <div>
                             <div>
                                 <h3>Send Message</h3>
                             </div>
@@ -81,12 +83,16 @@ export const Contact = () => {
                                 <div class="col-sm-12 input-col">
                                     <textarea type="textarea" rows="3" class="form-control" id="inputPassword" placeholder="Type message..." />
                                 </div>
+                            </div>    
+                            <div class="row">
+                                <div className="col-lg-12 mx-auto text-center error-class">
+                                    <p>{State.error && State.error}</p>
+                                </div>
                             </div>
                             <div class="row">
-                                <button className="btn btn-md btn-outline-success">Send message</button>
+                                <button className="btn btn-md btn-outline-success" onClick={()=>setState({type:"error",payload: "You will be able to send messages soon."})}>Send message</button>
                             </div>
-                            
-                      </form>
+                      </div>
                   </div>
                 </div>
             </p>

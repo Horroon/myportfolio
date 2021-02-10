@@ -1,16 +1,16 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-import {connect} from 'react-redux'
+import React from 'react';
+import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
 import {store} from '../../models/index';
-import logo from '../../assets/p-site-logo.png'
+import logo from '../../assets/p-site-logo.png';
 import './style.scss';
-import {SideNav as OverLay} from '../sidenav'
+
+import {SideNav as OverLay} from '../sidenav';
 
 export const Header = (props) => {
-
+    
     const {news, uicomponents,SideNav:{isOpen, component}, headerInformation:{headerclasses} } = props
     //const {isOpen} = sidenav
-    console.log('isOpen in header ', props)
     return <nav className={`navbar navbar-expand-lg navbar-dark ${headerclasses}`}>
        <OverLay props={{isOpen, component, store}} />
         <div className="nv-bdy">
