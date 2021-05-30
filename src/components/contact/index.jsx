@@ -48,7 +48,7 @@ export const Contact = () => {
                     {
                         [
                             {name:"Address", detail:"Satellite Town 6th Road, Rawalpindi.", icon:"fa fa-map-marker"},
-                            {name:"Phone", detail:"+92-349-5049558", icon:"fa fa-phone"},
+                            {name:"Phone", detail:"###########", icon:"fa fa-phone"},
                             {name:"Email", detail:"horroona@gmail.com", icon:"fa fa-envelope"}
                         ].map(item=> (<div className="location-hd">
                                         <h4>

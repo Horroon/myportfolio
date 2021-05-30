@@ -5,17 +5,27 @@ import TableRow from './givetableRow';
 import { Link } from 'react-router-dom'
 
 import './style.scss';
-const TableValues: Array<tableFace> = [{ head: { c1: "Position", c2: "Experience" }, value: { c1: "Software Engineer", c2: "1.5" } },
-{ head: { c1: "Nationality", c2: "Website" }, value: { c1: "Pakistani", c2: "Pending" } },
-{
-    head: { c1: "Date Of Birth", c2: "Languages" }, value: {
-        c1: "October 06,1995", c2: ` <ul>
-<li>Urdu</li>
-<li>Punjabi</li>
-<li>English</li>
-<li>Saraeki</li>
-</ul>` }
-},
+const TableValues: Array<tableFace> = [
+    { 
+        head: { c1: "Position", c2: "Experience" }, 
+        value: { c1: "Software Engineer", c2: "3 years" } 
+    },
+    { 
+        head: { c1: "Nationality", c2: "Website" }, 
+        value: { c1: "Pakistani", c2: "Pending" } 
+    },
+    {
+        head: { c1: "Date Of Birth", c2: "Languages" }, 
+        value: {
+            c1: "October 06", 
+            c2: `<ul>
+                    <li>Urdu</li>
+                    <li>Punjabi</li>
+                    <li>English</li>
+                    <li>Saraeki</li>
+                </ul>` 
+        }
+    },
 ]
 
 const Languages: Array<LanguageFace> = [{ lName: "JavaScript", progress: 80 }, { lName: "Nodejs", progress: 73 }, { lName: "Java", progress: 40 }, { lName: "Reactjs", progress: 70 }, { lName: "React Native", progress: 65 }, { lName: "GraphQL", progress: 75 }, { lName: "Apollo Client", progress: 70 }, { lName: "Prisma Api", progress: 70 }, { lName: "TypeScript", progress: 50 }, { lName: "Flutter", progress: 40 }]
@@ -41,7 +51,7 @@ const Main: React.FC = (): JSX.Element => {
         <div>
             <div className="row skls-rw-pdng" >
                 {
-                    Languages.map((language, i) => <Language lName={language.lName} progress={language.progress} key={i} />)
+                    Languages.map((language, i) => <Language lName={language.lName} progress={language.progress} key={'p-l-key-' + i} />)
                 }
             </div>
             <div className="row skls-rw-pdng">
@@ -58,7 +68,7 @@ const Main: React.FC = (): JSX.Element => {
                 <div className="col-lg-7">
                     <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                         {
-                            SocialButtonsList.map(button => <SocialButton link={button.link} icon={button.icon} />)
+                            SocialButtonsList.map((button,i) => <SocialButton link={button.link} icon={button.icon} key={'p-btn-key-' + i} />)
                         }
                     </div>
                 </div>
@@ -67,7 +77,7 @@ const Main: React.FC = (): JSX.Element => {
                 <div className="col-lg-12 rmr-pdng">
                     <table className="table table-bordered">
                         {
-                            TableValues.map((value) => <TableRow head={value.head} value={value.value} />)
+                            TableValues.map((value,i) => <TableRow head={value.head} value={value.value} key={'p-d-key-'+i} />)
                         }
                     </table>
                 </div>

@@ -39,7 +39,8 @@ $selected-background: #2a282b;
 
 .sidenav {
   padding-top: 0px;
-  
+  height: 100vh;
+  background: black;
   & .sidenavprofiledv{
     & a{
       &:hover{
@@ -58,11 +59,15 @@ $selected-background: #2a282b;
       padding: 10px;
     }
   }
-  & a{
+  & .scroll-able-div {
+    height: 70vh;
+    overflow-x: hidden;
+    & a {
       padding: 2px 0px 0px 0px;
       text-decoration: none;
       font-size: 25px;
       color: #818181;
+      border-top: 2px solid #818181;
       display: block;
       transition: 0.3s;
       & :hover{
@@ -85,6 +90,7 @@ $selected-background: #2a282b;
           margin-top: 1px;
         }
         & a{
+          border: none;
           padding: 0px;
           width: 100%;
           padding-left: 18px;
@@ -94,6 +100,8 @@ $selected-background: #2a282b;
         }
       }
     };
+  }
+
     & footer {
       padding-top: 2px;
       & .sidnv-cprt {
