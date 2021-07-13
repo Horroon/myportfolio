@@ -1,3 +1,3 @@
-import {handleHeaderWithScroll} from './header-scroll-controller';
+import {ScrollController} from './header-scroll-controller';
 
-export {handleHeaderWithScroll}
+export {ScrollController}

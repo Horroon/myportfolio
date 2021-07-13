@@ -13,6 +13,13 @@ import {Picture} from './photos/index';
 import {AcountInfo} from './account/index';
 import {SideNav} from './sidenav';
 import {Services} from './services/index';
+import {PictureSection} from './profile/pictureSection';
+import {Activities} from './profile/activity';
+import {Skills} from './profile/skill/index';
+import {Hobbies} from './profile/activityFolder/hobbies';
+import {Education} from './profile/activityFolder/education';
+import {Address} from './profile/activityFolder/address';
+
 
 export {
     Home,
@@ -29,5 +36,11 @@ export {
     Picture,
     AcountInfo,
     SideNav,
-    Services
+    Services,
+    PictureSection,
+    Activities,
+    Skills,
+    Hobbies,
+    Education,
+    Address,
 }

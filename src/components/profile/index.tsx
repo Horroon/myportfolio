@@ -1,30 +1,25 @@
-import React,{useEffect} from 'react';
-import PictureSection from './pictureSection';
-import Activity from './activity';
-import Skill from './skill/index';
-import {store} from '../../models/index';
-import { HeaderClasses } from '../../constants/headers-classes';
-import {handleHeaderWithScroll} from '../../utilities-methods'
+import React from 'react';
+import {ScrollController} from '../../utilities-methods';
 
 import './style.scss'
+import SchemaParser from '../../services/schemaParser';
 
-export const MainProfile: React.FC = (): JSX.Element => {
-    const keepEyeOnScroll = ()=> handleHeaderWithScroll(store)
-    useEffect(()=>{
-        store.dispatch.headerInformation.updateheaderclasses({headerclasses: HeaderClasses.stickytransparentHeader})
-        window.addEventListener('scroll',keepEyeOnScroll)
-       return ()=>window.removeEventListener('scroll', keepEyeOnScroll)
-    },[])
+interface MainProfileInterface {
+    items: any[]
+}
+export const MainProfile: React.FC<MainProfileInterface> = (props): JSX.Element => {
+    const {items} = props
+    ScrollController();
     return <div>
         <div className="row pf-rw-1">
-            <PictureSection />
+            <SchemaParser schema={items[0]} />
         </div>
         <div className="row pf-rw-2">
             <div className="col-lg-4 prf-hb-prnt-clm">
-                <Activity />
+                <SchemaParser schema={items[1]} />
             </div>
             <div className="col-lg-8 prf-skl-prnt-clm">
-                <Skill />
+                <SchemaParser schema={items[2]} />
             </div>
         </div>
     </div>

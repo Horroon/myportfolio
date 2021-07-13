@@ -1,30 +1,31 @@
 import React from 'react';
 
-const Reference = () => {
+interface tableRowFace{
+    th: string,
+    td: string,
+}
+
+interface EducationFace{
+    heading: string,
+    educationList:Array<tableRowFace>
+}
+export const Education:React.FC<EducationFace> = ({heading, educationList}) => {
     return <div className="edtn-prnt-dv">
         <div className="edctn-tltl-dv">
-            <h3>Education</h3>
+            <h3>{heading}</h3>
         </div>
         <div>
             <table className="table">
                 <tbody>
-                    <tr>
-                        <th>Matric</th>
-                        <td>Govt. Hight School Nawan</td>
-                    </tr>
-                    <tr>
-                        <th>FSc(Pre-Engineering)</th>
-                        <td>Govt. Degree College Bin Hafiz Jee</td>
-                    </tr>
+                    {
+                        educationList.map((education,i)=><tr key={i+education.td}>
+                            <th>{education.th}</th>
+                            <td>{education.td}</td>
+                        </tr>)
+                    }
 
-                    <tr>
-                        <th>BS(Software Engineering)</th>
-                        <td>Virtual University Of Pakistan</td>
-                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
 }
-
-export default Reference

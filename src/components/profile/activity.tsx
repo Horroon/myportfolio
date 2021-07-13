@@ -1,21 +1,22 @@
 import React from 'react';
-import Hobby from './activityFolder/hobbies';
-import Reference from './activityFolder/education';
-import Address from './address';
+import SchemaParser from '../../services/schemaParser';
 
-const Activities: React.FC = (): JSX.Element => {
-    return <div className="row hb-rf-adrs-prnt-dv">
+interface ActivitiesFace{
+    items: any
+}
+export const Activities: React.FC<ActivitiesFace> = ({items}): JSX.Element => (
+<div className="row hb-rf-adrs-prnt-dv">
         <div className="col-lg-12">
-            <Hobby />
+            <SchemaParser  schema={items[0]} />
         </div>
         <div className="col-lg-12">
-            <Reference />
+            <SchemaParser  schema={items[1]} />
         </div>
         
         <div className="col-lg-12">
-            <Address />
+            <SchemaParser  schema={items[2]} />
         </div>
     </div>
-}
+)
 
 export default Activities

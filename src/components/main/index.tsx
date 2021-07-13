@@ -11,17 +11,23 @@ import {
 } from "react-router-dom";
 import {PATHS} from '../paths';
 
-const RightPath = ({path = '/', component="HOME"})=>
+interface RightPathInterface {
+    path: string,
+    schema: any
+}
+const RightPath = ({path = '/', schema = {component: "HOME"}})=>{
+    return(
     <Route path={path} exact >
-        <SchemaParser schema={{ component }} />
-    </Route>
+        <SchemaParser schema={{...schema}} />
+    </Route>)
+    }
 
 const RouterComponent = () =>(
         <Router>
             <div style={{ background: '#151515' }}>
                 <SchemaParser schema={LoadHeaderData()} />
                     <div style={{minHeight: '100vh'}}>
-                        {PATHS.map(path=><RightPath path={path.path} component={path.component} />)}
+                        {PATHS.map((path:RightPathInterface)=><RightPath path={path.path} schema={path.schema} />)}
                     </div>
                 <SchemaParser schema={LoadFooterData()} />
                 <ToastContainer />

@@ -1,7 +1,5 @@
-import React, { useState, useReducer, useEffect } from "react";
-import { toast } from 'react-toastify'
-import {store} from '../../models/index';
-import {handleHeaderWithScroll} from '../../utilities-methods/index';
+import React, { useReducer } from "react";
+import {ScrollController} from '../../utilities-methods/index';
 import './style.scss'
 
 const InitialState= { fname: '', lname: '', email: '', message: '', error:"" }
@@ -25,14 +23,7 @@ const reducer = (state = InitialState, action) => {
 }
 export const Contact = () => {
     const [State, setState] = useReducer(reducer, InitialState)
-    const keepEyeOnScroll = ()=> handleHeaderWithScroll(store)
-    useEffect(()=>{
-        keepEyeOnScroll(store)
-        window.addEventListener('scroll',keepEyeOnScroll)
-       return ()=>{
-        window.removeEventListener('scroll', keepEyeOnScroll)
-    }
-    },[])
+    ScrollController()
 
     return <div className="contact-main">
                 <div className="shadow-contact">

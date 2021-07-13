@@ -13,7 +13,13 @@ import {
     AboutMain,
     Picture,
     AcountInfo,
-    Services
+    Services,
+    PictureSection,
+    Activities,
+    Skills,
+    Hobbies,
+    Education,
+    Address
 } from '../components/index';
 import {ContentPage} from '../contentpage/index';
 
@@ -22,7 +28,7 @@ import {ContentPage} from '../contentpage/index';
     const components = {
         HOME: _=><Home />,
         FAVOURITE:_=><Favourite />,
-        PROFILE:_=><MainProfile />,
+        PROFILE:_=><MainProfile {...schema} />,
         HEADER:_=><Header {...schema.item} />,
         FOOTER:_=><Footer {...schema} />,
         GALLERY:_=><GalleryMainComponent />,
@@ -33,7 +39,13 @@ import {ContentPage} from '../contentpage/index';
         ABOUTSECTION:_=><AboutMain />,
         PICTURES:_=><Picture />,
         SIMPLEINFO:_=><AcountInfo />,
-        SERVICES: _=> <Services />
+        SERVICES: _=> <Services />,
+        PICTURESECTION: _=> <PictureSection {...schema} />,
+        ACTIVITIES: _=> <Activities {...schema}/>,
+        SKILLS: _=><Skills {...schema} />,
+        HOBBIES: _=> <Hobbies {...schema}/>,
+        EDUCATION: _=> <Education {...schema} />,
+        ADDRESS: _=> <Address {...schema} />
     }
      const Screen = components[schema.component]
      return ContentPage({Component:Screen})

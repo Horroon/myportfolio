@@ -1,20 +1,11 @@
-import React, {useEffect, useCallback} from 'react';
+import React from 'react';
 import SchemaParser from '../../services/schemaParser';
-import {store} from '../../models/index';
 import {BigCarousel} from './bigcarousel';
-import { HeaderClasses } from '../../constants/headers-classes';
-import {handleHeaderWithScroll} from '../../utilities-methods'
+import {ScrollController} from '../../utilities-methods'
 import './style.scss';
 
 export const Home = (props) => {
-    const keepEyeOnScroll = ()=> handleHeaderWithScroll(store)
-    useEffect(()=>{
-        keepEyeOnScroll(store)
-        window.addEventListener('scroll',keepEyeOnScroll)
-       return ()=>{
-        window.removeEventListener('scroll', keepEyeOnScroll)
-    }
-    },[])
+    ScrollController();
     return<div>
             <div>
                 <BigCarousel />

@@ -1,38 +1,19 @@
 import React from 'react';
 import Language from './language';
-import { LanguageFace, tableFace } from './interfaces'
+import { LanguageFace } from './interfaces'
 import TableRow from './givetableRow';
-import { Link } from 'react-router-dom'
 
 import './style.scss';
-const TableValues: Array<tableFace> = [
-    { 
-        head: { c1: "Position", c2: "Experience" }, 
-        value: { c1: "Software Engineer", c2: "3 years" } 
-    },
-    { 
-        head: { c1: "Nationality", c2: "Website" }, 
-        value: { c1: "Pakistani", c2: "Pending" } 
-    },
-    {
-        head: { c1: "Date Of Birth", c2: "Languages" }, 
-        value: {
-            c1: "October 06", 
-            c2: `<ul>
-                    <li>Urdu</li>
-                    <li>Punjabi</li>
-                    <li>English</li>
-                    <li>Saraeki</li>
-                </ul>` 
-        }
-    },
-]
 
-const Languages: Array<LanguageFace> = [{ lName: "JavaScript", progress: 80 }, { lName: "Nodejs", progress: 73 }, { lName: "Java", progress: 40 }, { lName: "Reactjs", progress: 70 }, { lName: "React Native", progress: 65 }, { lName: "GraphQL", progress: 75 }, { lName: "Apollo Client", progress: 70 }, { lName: "Prisma Api", progress: 70 }, { lName: "TypeScript", progress: 50 }, { lName: "Flutter", progress: 40 }]
 
 interface LinkFace {
     icon: string,
     link: string
+}
+
+interface TableFace {
+    head: {c1: string, c2: string},
+    value: {c1: string, c2: string}
 }
 const SocialButton: React.FC<LinkFace> = (props): JSX.Element => {
     return <div>
@@ -42,16 +23,21 @@ const SocialButton: React.FC<LinkFace> = (props): JSX.Element => {
 
 const SocialButtonsList: Array<LinkFace> = [{ link: "https://web.facebook.com/haroonrasheed.valient", icon: "facebook" }, { link: "https://twitter.com/Horroon", icon: "twitter" }, { link: "https://www.instagram.com/horroona/", icon: "instagram" }]
 
-const Main: React.FC = (): JSX.Element => {
-
+interface SkillsFace {
+    languages: Array<LanguageFace>,
+    heading: string,
+    background: Array<TableFace>
+}
+export const Skills: React.FC<SkillsFace> = (props): JSX.Element => {
+    const {languages, heading, background} = props;
     return <div className="skl-prnt-dv">
         <div>
-            <h3>Skills</h3>
+            <h3>{heading}</h3>
         </div>
         <div>
             <div className="row skls-rw-pdng" >
                 {
-                    Languages.map((language, i) => <Language lName={language.lName} progress={language.progress} key={'p-l-key-' + i} />)
+                    languages.map((language, i) => <Language lName={language.lName} progress={language.progress} key={'p-l-key-' + i} />)
                 }
             </div>
             <div className="row skls-rw-pdng">
@@ -77,7 +63,7 @@ const Main: React.FC = (): JSX.Element => {
                 <div className="col-lg-12 rmr-pdng">
                     <table className="table table-bordered">
                         {
-                            TableValues.map((value,i) => <TableRow head={value.head} value={value.value} key={'p-d-key-'+i} />)
+                            background.map((value,i) => <TableRow head={value.head} value={value.value} key={'p-d-key-'+i} />)
                         }
                     </table>
                 </div>
@@ -86,4 +72,4 @@ const Main: React.FC = (): JSX.Element => {
     </div>
 }
 
-export default Main
+export default Skills

@@ -1,7 +1,5 @@
-import React,{useEffect} from 'react';
-import {store} from '../../models/index';
-import { HeaderClasses } from '../../constants/headers-classes';
-import {handleHeaderWithScroll} from '../../utilities-methods';
+import React from 'react';
+import {ScrollController} from '../../utilities-methods';
 import serviceslogo from '../../assets/picture-dgtl-pc-removebg-preview.png';
 import webdev from '../../assets/web-dev.jpg';
 import mobileapp from '../../assets/mobile-app.jpg';
@@ -10,14 +8,7 @@ import bugpic from '../../assets/bug-pic.jpg';
 import './style.scss';
 
 const Services = ()=>{
-    
-    const keepEyeOnScroll = ()=> handleHeaderWithScroll(store)
-    useEffect(()=>{
-        keepEyeOnScroll(store)
-        window.addEventListener('scroll',keepEyeOnScroll)
-       return ()=>window.removeEventListener('scroll', keepEyeOnScroll)
-    },[])
-
+    ScrollController();
     return <div className="services-container">
         <div className="service-logo-main">
             <div className="shadow-div">

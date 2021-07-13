@@ -18,17 +18,20 @@ const ActivityItem: React.FC<ItemFace> = (props) => {
 }
 
 const HobbiesList: Array<ItemFace> = [{ icon: "fa fa-pencil", text: "writing" }, { icon: "fa fa-male", text: "walking" }, { icon: "fa fa-car", text: "visiting" }, { icon: "fa fa-book", text: "reading" }, { icon: "fa fa-film", text: "movies" },{ icon: "fa fa-gamepad", text: "Indoor games" },]
-const Hobbies = () => {
+
+interface HobbyFace {
+    heading: string,
+    hobbiesList: Array<ItemFace>
+}
+export const Hobbies:React.FC<HobbyFace> = ({heading, hobbiesList}) => {
     return <div>
         <div className="hb-tl-dv">
-            <h3>Hobbies</h3>
+            <h3>{heading}</h3>
         </div>
         <div className="row actvty-itms-row">
             {
-                HobbiesList.map((h) => <ActivityItem icon={h.icon} text={h.text} />)
+                hobbiesList.map((h) => <ActivityItem icon={h.icon} text={h.text} />)
             }
         </div>
     </div>
 }
-
-export default Hobbies
