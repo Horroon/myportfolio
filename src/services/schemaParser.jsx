@@ -53,7 +53,7 @@ import {
         PHOTO: _=> <Photo {...schema} />,
         CONTAINER:_=> <Container {...schema}>
             {
-                schema.items.map(item=> <SchemaParser schema={item} />)
+                schema.items.map((item,i)=> <SchemaParser schema={item} key={schema.component + i} />)
             }
         </Container>
     }
