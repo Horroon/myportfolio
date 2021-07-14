@@ -12,21 +12,23 @@ import {
     P_Slider,
     AboutMain,
     Picture,
-    AcountInfo,
+    SocialInfo,
     Services,
     PictureSection,
     Activities,
     Skills,
     Hobbies,
     Education,
-    Address
+    Address,
+    HomeCarousel,
+    Button,
+    Photo, 
+    Container
 } from '../components/index';
-import {ContentPage} from '../contentpage/index';
 
-
- const SchemaParser = ({schema})=>{
+ const SchemaParser = ({schema={}, schemas=[]})=>{
     const components = {
-        HOME: _=><Home />,
+        HOME: _=><Home {...schema} />,
         FAVOURITE:_=><Favourite />,
         PROFILE:_=><MainProfile {...schema} />,
         HEADER:_=><Header {...schema.item} />,
@@ -36,18 +38,33 @@ import {ContentPage} from '../contentpage/index';
         CONTACT: _=><Contact />,
         DETAIL: _=><Detail />,
         PSLIDER: _=><P_Slider />,
-        ABOUTSECTION:_=><AboutMain />,
-        PICTURES:_=><Picture />,
-        SIMPLEINFO:_=><AcountInfo />,
+        ABOUTSECTION:_=><AboutMain {...schema} />,
+        PICTURES:_=><Picture {...schema} />,
+        SOCIALINFO:_=><SocialInfo />,
         SERVICES: _=> <Services />,
         PICTURESECTION: _=> <PictureSection {...schema} />,
         ACTIVITIES: _=> <Activities {...schema}/>,
         SKILLS: _=><Skills {...schema} />,
         HOBBIES: _=> <Hobbies {...schema}/>,
         EDUCATION: _=> <Education {...schema} />,
-        ADDRESS: _=> <Address {...schema} />
+        ADDRESS: _=> <Address {...schema} />,
+        HOMECAROUSEL: _=> <HomeCarousel {...schema} />,
+        BUTTON:_ => <Button {...schema} />,
+        PHOTO: _=> <Photo {...schema} />,
+        CONTAINER:_=> <Container {...schema}>
+            {
+                schema.items.map(item=> <SchemaParser schema={item} />)
+            }
+        </Container>
     }
      const Screen = components[schema.component]
-     return ContentPage({Component:Screen})
+     if(schemas.length){
+       return <>
+        {
+          schemas.map(currentSchema=><SchemaParser schema={currentSchema} />)
+        }
+       </>
+     }
+     return <Screen />
  }
 export default SchemaParser 

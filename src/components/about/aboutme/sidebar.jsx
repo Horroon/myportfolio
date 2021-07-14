@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import {PATHS} from '../../paths';
 
 export const SideBar = ({sidebar,changeMode, Profile, PATHS})=>{
     return<div className={`col-lg-2 col-sm-12 about-sidenav side-${sidebar.bgClass}`}>

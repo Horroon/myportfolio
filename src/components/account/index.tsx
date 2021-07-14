@@ -2,7 +2,7 @@ import React from 'react';
 import DefaultProfile from '../../assets/account_p.webp'
 import './style.scss';
 
-export const AcountInfo = (): JSX.Element => {
+export const SocialInfo = (): JSX.Element => {
     return <div style={{ textAlign: 'center', color: 'white' }}>
         <div>
             <img className="acct-img-dv" src={DefaultProfile} alt={"Not found"} draggable={false} />

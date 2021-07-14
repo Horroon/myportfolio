@@ -1,66 +1,108 @@
 {
     "component": "PROFILE", 
     "items": [
-        {   
-            "component":"PICTURESECTION",
-            "ProfileImage": "/static/media/acct.359ef0fa.webp", 
-            "heading": "Haroon Rasheed / Developer For React Technologies", 
-            "description": "I am a 24 year old software engineer with 2 year in house experience as FrontEnd Developer with working experience on backend as Node.js developer. I have developed Single Page Applications from scratch as well worked with medium level teams for a range of clients. For my side projects I have worked with React Native, Angular and Vanilla JS . I am currently working with MTBC Islamabad. I feel excited to work with fast paced progressive teams achieving something great. " 
+        {
+            "component":"CONTAINER",
+            "cssClasses":"row pf-rw-1",
+            "items":[
+                {   
+                    "component":"PICTURESECTION",
+                    "ProfileImage": "/static/media/acct.359ef0fa.webp", 
+                    "heading": "Haroon Rasheed / Developer For React Technologies", 
+                    "description": "I am a 24 year old software engineer with 2 year in house experience as FrontEnd Developer with working experience on backend as Node.js developer. I have developed Single Page Applications from scratch as well worked with medium level teams for a range of clients. For my side projects I have worked with React Native, Angular and Vanilla JS . I am currently working with MTBC Islamabad. I feel excited to work with fast paced progressive teams achieving something great. " 
+                }
+            ]
         },
-        {   
-            "component":"ACTIVITIES",
+        {
+            "component":"CONTAINER",
+            "cssClasses":"row pf-rw-2",
             "items":[
                 {
-                    "component":"HOBBIES",
-                    "heading":"Hobbies",
-                    "hobbiesList": [{ "icon": "fa fa-pencil", "text": "writing" }, { "icon": "fa fa-male", "text": "walking" }, { "icon": "fa fa-car", "text": "visiting" }, { "icon": "fa fa-book", "text": "reading" }, { "icon": "fa fa-film", "text": "movies" },{ "icon": "fa fa-gamepad", "text": "Indoor games" }]
-                },
-                {
-                    "component":"EDUCATION",
-                    "heading":"Education",
-                    "educationList":[
-                        {
-                            "th":"Matric",
-                            "td":"Govt. Hight School Nawan"
-                        },
-                        {
-                            "th":"FSc(Pre-Engineering)",
-                            "td":"Govt. Degree College Bin Hafiz Jee"
-                        },
-                        {
-                            "th":"BS(Software Engineering)",
-                            "td":"Virtual University Of Pakistan"
+                    "component":"CONTAINER",
+                    "cssClasses":"col-lg-4 prf-hb-prnt-clm",
+                    "items":[
+                        {   
+                            "component":"ACTIVITIES",
+                            "items":[
+                                {
+                                    "component":"CONTAINER",
+                                    "cssClasses":"col-lg-12",
+                                    "items":[
+                                        {
+                                            "component":"HOBBIES",
+                                            "heading":"Hobbies",
+                                            "hobbiesList": [{ "icon": "fa fa-pencil", "text": "writing" }, { "icon": "fa fa-male", "text": "walking" }, { "icon": "fa fa-car", "text": "visiting" }, { "icon": "fa fa-book", "text": "reading" }, { "icon": "fa fa-film", "text": "movies" },{ "icon": "fa fa-gamepad", "text": "Indoor games" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "component":"CONTAINER",
+                                    "cssClasses":"col-lg-12",
+                                    "items":[
+                                        {
+                                            "component":"EDUCATION",
+                                            "heading":"Education",
+                                            "educationList":[
+                                                {
+                                                    "th":"Matric",
+                                                    "td":"Govt. Hight School Nawan"
+                                                },
+                                                {
+                                                    "th":"FSc(Pre-Engineering)",
+                                                    "td":"Govt. Degree College Bin Hafiz Jee"
+                                                },
+                                                {
+                                                    "th":"BS(Software Engineering)",
+                                                    "td":"Virtual University Of Pakistan"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "component":"CONTAINER",
+                                    "cssClasses":"col-lg-12",
+                                    "items":[
+                                        {
+                                            "component":"ADDRESS",
+                                            "heading":"Address",
+                                            "description":"Islamabad, Pakistan"
+                                        }
+                                    ]
+                                }
+                            ] 
+                        }               
+                    ]
+                },{
+                    "component":"CONTAINER",
+                    "cssClasses":"col-lg-8 prf-skl-prnt-clm",
+                    "items":[
+                        {   
+                            "component":"SKILLS",
+                            "heading": "Skills",
+                            "languages": [{ "lName": "JavaScript", "progress": 80 }, { "lName": "Nodejs", "progress": 73 }, { "lName": "Java", "progress": 40 }, { "lName": "Reactjs", "progress": 70 }, { "lName": "React Native", "progress": 65 }, { "lName": "GraphQL", "progress": 75 }, { "lName": "Apollo Client", "progress": 70 }, { "lName": "Prisma Api", "progress": 70 }, { "lName": "TypeScript", "progress": 50 }, { "lName": "Flutter", "progress": 40 }],
+                            "background":[
+                                { 
+                                    "head": { "c1": "Position", "c2": "Experience" }, 
+                                    "value": { "c1": "Software Engineer", "c2": "3 years" } 
+                                },
+                                { 
+                                    "head": { "c1": "Nationality", "c2": "Website" }, 
+                                    "value": { "c1": "Pakistani", "c2": "Pending" } 
+                                },
+                                {
+                                    "head": { "c1": "Date Of Birth", "c2": "Languages" }, 
+                                    "value": {
+                                        "c1": "October 06", 
+                                        "c2": "<ul><li>Urdu</li><li>Punjabi</li><li>English</li><li>Saraeki</li></ul>"
+                                    }
+                                }
+                            ] 
                         }
                     ]
-                },
-                {
-                    "component":"ADDRESS",
-                    "heading":"Address",
-                    "description":"Islamabad, Pakistan"
                 }
-            ] 
-        },
-        {   
-            "component":"SKILLS",
-            "heading": "Skills",
-            "languages": [{ "lName": "JavaScript", "progress": 80 }, { "lName": "Nodejs", "progress": 73 }, { "lName": "Java", "progress": 40 }, { "lName": "Reactjs", "progress": 70 }, { "lName": "React Native", "progress": 65 }, { "lName": "GraphQL", "progress": 75 }, { "lName": "Apollo Client", "progress": 70 }, { "lName": "Prisma Api", "progress": 70 }, { "lName": "TypeScript", "progress": 50 }, { "lName": "Flutter", "progress": 40 }],
-            "background":[
-                { 
-                    "head": { "c1": "Position", "c2": "Experience" }, 
-                    "value": { "c1": "Software Engineer", "c2": "3 years" } 
-                },
-                { 
-                    "head": { "c1": "Nationality", "c2": "Website" }, 
-                    "value": { "c1": "Pakistani", "c2": "Pending" } 
-                },
-                {
-                    "head": { "c1": "Date Of Birth", "c2": "Languages" }, 
-                    "value": {
-                        "c1": "October 06", 
-                        "c2": "<ul><li>Urdu</li><li>Punjabi</li><li>English</li><li>Saraeki</li></ul>"
-                    }
-                }
-            ] 
+
+            ]
         }
     ]
 }
