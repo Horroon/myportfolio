@@ -1,4 +1,4 @@
-import {LoadProfileData, LoadHomeData} from '../../database';
+import {LoadProfileData, LoadHomeData, LoadServiceData} from '../../database';
 
 interface PathInterface {
     path: string,
@@ -7,7 +7,7 @@ interface PathInterface {
 
 export const PATHS:PathInterface[] =[
     {path:'/', schema: LoadHomeData()},
-    {path:'/services',schema:{component:"SERVICES"}},
+    {path:'/services',schema: LoadServiceData()},
     {path:'/myprofile', schema: LoadProfileData() },
     {path:'/gallery', schema: {component:"GALLERY" }},
     {path:'/contactme', schema: {component: "CONTACT"}},

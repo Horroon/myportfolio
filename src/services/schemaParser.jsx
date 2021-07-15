@@ -23,7 +23,10 @@ import {
     HomeCarousel,
     Button,
     Photo, 
-    Container
+    Container,
+    H2,H3,H4,
+    ServiceContainer,
+    ServiceLogoContainer
 } from '../components/index';
 
  const SchemaParser = ({schema={}, schemas=[]})=>{
@@ -41,7 +44,7 @@ import {
         ABOUTSECTION:_=><AboutMain {...schema} />,
         PICTURES:_=><Picture {...schema} />,
         SOCIALINFO:_=><SocialInfo />,
-        SERVICES: _=> <Services />,
+        SERVICES: _=> <Services {...schema} />,
         PICTURESECTION: _=> <PictureSection {...schema} />,
         ACTIVITIES: _=> <Activities {...schema}/>,
         SKILLS: _=><Skills {...schema} />,
@@ -51,6 +54,9 @@ import {
         HOMECAROUSEL: _=> <HomeCarousel {...schema} />,
         BUTTON:_ => <Button {...schema} />,
         PHOTO: _=> <Photo {...schema} />,
+        SERVICECONTAINER: _=> <ServiceContainer {...schema} />,
+        SERVICELOGCONTAINER:_=> <ServiceLogoContainer {...schema} />,
+        H4:_=> <H4 {...schema}>{schema.text}</H4>,
         CONTAINER:_=> <Container {...schema}>
             {
                 schema.items.map((item,i)=> <SchemaParser schema={item} key={schema.component + i} />)

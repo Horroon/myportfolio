@@ -22,8 +22,9 @@ import {Address} from './profile/activityFolder/address';
 import {HomeCarousel} from './home/bigcarousel/index';
 import {Button} from './photos/button';
 import {Photo} from './photos/photo';
-import {Container} from '../utilitycomponents/container';
-
+import {Container,H2,H3,H4} from '../utilitycomponents/index';
+import {ServiceContainer} from './services/service-container';
+import {ServiceLogoContainer} from './services/service-log';
 
 export {
     Home,
@@ -50,5 +51,8 @@ export {
     HomeCarousel,
     Button,
     Photo,
-    Container
+    Container,
+    H4,H3,H2,
+    ServiceLogoContainer,
+    ServiceContainer,
 }

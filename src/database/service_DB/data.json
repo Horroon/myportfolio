@@ -1,0 +1,60 @@
+{
+    "component":"SERVICES",
+    "items":[
+        {
+            "component":"SERVICELOGCONTAINER",
+            "img":"/static/media/picture-dgtl-pc-removebg-preview.d620dcb7.png",
+            "desc":"My objective in life is to serve the humanity and help the folks to pick them from the mud and bring them into new era of life by providing IT services in form of software applications"
+        },
+        {
+            "component":"CONTAINER",
+            "cssClasses":"",
+            "items":[
+                {
+                    "component":"CONTAINER",
+                    "cssClasses":"service-hd-tg w3-animate-left",
+                    "items":[{
+                        "component":"H4",
+                        "text":"Services"
+                    }]
+                }, 
+                {
+                    "component":"CONTAINER",
+                    "cssClasses":"services-tg",
+                    "items":[
+                        {
+                            "component":"CONTAINER",
+                            "cssClasses":"row",
+                            "items":[
+                                {
+                                    "component":"SERVICECONTAINER",
+                                    "title":"Website development", 
+                                    "desc":"I provide single page web applications in react, angularjs or vue. But prefer to work with react.",
+                                    "img":"/static/media/web-dev.1ba2e667.jpg"
+                                },
+                                {
+                                    "component":"SERVICECONTAINER",
+                                    "title":"Cross-plateform mobile apps", 
+                                    "desc":"Mobile application in react native(expo, cli) etc. Also work to improve any existing app in react native.",
+                                    "img":"/static/media/mobile-app.5879c6a0.jpg"
+                                },
+                                {
+                                    "component":"SERVICECONTAINER",
+                                    "title":"Backend Services(Nodejs,Graphql,Prisma)", 
+                                    "desc":"I like to build backend in nodejs. Rest and Graphql apies with node and graphql-yoga or apollo server with prisma client. I like Graphql backend more than rest.",
+                                    "img":"https://akm-img-a-in.tosshub.com/indiatoday/images/story/201810/stockvault-person-studying-and-learning---knowledge-concept178241_0.jpeg?yCXmhi7e2ARwUtzHHlvtcrgETnDgFwCK"
+                                },
+                                {
+                                    "component":"SERVICECONTAINER",
+                                    "title":"Bugs resolving", 
+                                    "desc":"I like to resolve bug or add any improvement into any existing project.",
+                                    "img":"/static/media/bug-pic.37049d60.jpg"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
