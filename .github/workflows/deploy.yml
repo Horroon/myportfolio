@@ -32,6 +32,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
+          CI: false
           REACT_APP_GITHUB_USERNAME: Horroon
           REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
 
