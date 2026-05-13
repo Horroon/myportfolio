@@ -4,11 +4,17 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
+    types:
+      - closed
 
 jobs:
   build-and-deploy:
     name: Build & Deploy
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
 
     steps:
       - name: Checkout repository
@@ -26,9 +32,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Public vars — safe to hardcode for a portfolio
           REACT_APP_GITHUB_USERNAME: Horroon
-          # Optional backend URL — set in repo secrets if you have one
           REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
 
       - name: Deploy to Firebase Hosting
