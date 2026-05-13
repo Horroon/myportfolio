@@ -12,5 +12,6 @@ export const PATHS:PathInterface[] =[
     {path:'/gallery', schema: {component:"GALLERY" }},
     {path:'/contactme', schema: {component: "CONTACT"}},
     {path:'/aboutme', schema: {component: "ABOUTME"}},
-    {path:'/detail', schema: {component:"DETAIL"}}
+    {path:'/detail', schema: {component:"DETAIL"}},
+    {path:'/projects', schema: {component:"PROJECTS"}}
 ];

@@ -23,6 +23,7 @@ import {HomeCarousel} from './home/bigcarousel/index';
 import {Button} from './photos/button';
 import {Photo} from './photos/photo';
 import {Container} from '../utilitycomponents/container';
+import {Projects} from './projects/index';
 
 
 export {
@@ -50,5 +51,6 @@ export {
     HomeCarousel,
     Button,
     Photo,
-    Container
+    Container,
+    Projects
 }

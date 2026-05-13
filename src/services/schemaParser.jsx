@@ -22,8 +22,9 @@ import {
     Address,
     HomeCarousel,
     Button,
-    Photo, 
-    Container
+    Photo,
+    Container,
+    Projects
 } from '../components/index';
 
  const SchemaParser = ({schema={}, schemas=[]})=>{
@@ -34,6 +35,7 @@ import {
         HEADER:_=><Header {...schema.item} />,
         FOOTER:_=><Footer {...schema} />,
         GALLERY:_=><GalleryMainComponent />,
+        PROJECTS:_=><Projects />,
         ABOUTME: _=><AboutMe />,
         CONTACT: _=><Contact />,
         DETAIL: _=><Detail />,

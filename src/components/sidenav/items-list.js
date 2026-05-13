@@ -50,6 +50,12 @@ const LIST = [
         icon:'fa fa-gamepad'
     },
     {
+        name:"Projects",
+        path:"/projects",
+        label:"GitHub Projects",
+        icon:'fa fa-github'
+    },
+    {
         name:"Faq",
         path:"/faq",
         label:"Faq",

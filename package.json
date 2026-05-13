@@ -15,7 +15,7 @@
     "firebase": "^10.9.0",
     "logrocket": "^1.0.12",
     "mixpanel-browser": "^2.39.0",
-    "node-sass": "^9.0.0",
+    "sass": "^1.77.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
@@ -28,8 +28,8 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
