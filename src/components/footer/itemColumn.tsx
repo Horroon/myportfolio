@@ -2,7 +2,7 @@ import React from 'react';
 import { itemFace } from './interface'
 
 const GiveColumn: React.FC<itemFace> = (props): JSX.Element => {
-    return <div className="col-lg-3">
+    return <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
         <div>
             <div className="ftr-icn-ttl-dv">
                 <i className={`${props.iconClass} ftr-icn-cls`} />

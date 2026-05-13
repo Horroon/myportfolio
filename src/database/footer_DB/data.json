@@ -2,9 +2,9 @@
     "component":"FOOTER",
     "Items" :[
         {
-            "iconClass": "fa fa-map-marker",
-            "title": "Abode",
-            "desc": "I am working in <a class=address-link href=https://www.emumba.com/ target=_black>Emumba</a>, is a great company, providing amazing services to its clients, it is located at I-10/3, Islamabad, Pakistan"
+            "iconClass": "fa fa-building",
+            "title": "Company",
+            "desc": "Currently working at <a class=address-link href=https://www.linkedin.com/in/haroon-rasheed-5425a0127/ target=_blank>Intech Process Automation</a> — delivering industrial automation and process control solutions. Based in Islamabad, Pakistan."
         },
         {
             "iconClass": "fa fa-globe",
@@ -14,17 +14,17 @@
         {
             "iconClass": "fa fa-cogs",
             "title": "Milieu",
-            "desc": "Comfortable,restful and pleasent environment always keeps fit."
+            "desc": "Comfortable, restful and pleasant environment always keeps me at my best."
         },
         {
             "iconClass": "fa fa-share-alt",
             "title": "Follow On",
-            "desc": "<div class=ftr-social-icon-tab><div class=accnticn-dv><a href=https://web.facebook.com/haroonrasheed.valient class='fa fa-facebook' target=_black></a></div><div class=accnticn-dv><a href=https://twitter.com/Horroon class='fa fa-twitter' target=_black> </a></div><div class=accnticn-dv><a href=https://www.instagram.com/horroona/ class='fa fa-instagram' target=_black></a></div><div class=accnticn-dv><a href=https://www.linkedin.com/in/haroon-rasheed-5425a0127/ class='fa fa-linkedin' target=_black></a></div></div>"
+            "desc": "<div class=ftr-social-icon-tab><div class=accnticn-dv><a href=https://web.facebook.com/haroonrasheed.valient class='fa fa-facebook' target=_blank></a></div><div class=accnticn-dv><a href=https://twitter.com/Horroon class='fa fa-twitter' target=_blank> </a></div><div class=accnticn-dv><a href=https://www.instagram.com/horroona/ class='fa fa-instagram' target=_blank></a></div><div class=accnticn-dv><a href=https://www.linkedin.com/in/haroon-rasheed-5425a0127/ class='fa fa-linkedin' target=_blank></a></div></div>"
         }
     ],
     "owner":{
         "name":"Haroon Rasheed",
-        "year":"2021"
+        "year":"2026"
     }
-    
+
 }

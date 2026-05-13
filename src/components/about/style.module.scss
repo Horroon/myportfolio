@@ -16,6 +16,16 @@
     padding-top: 0px;
     padding-left: 50px;
     padding-right: 50px;
+
+    @media (max-width: 991px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @media (max-width: 575px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 .rmw-dflt-lnk-prpty{
     width: auto !important;
@@ -31,9 +41,14 @@
     margin: auto;
     padding: 26px;
     &:hover{
-    background: #d98404;
-    border-radius: 5px;
-    cursor: pointer;
+        background: #d98404;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 575px) {
+        width: 30%;
+        padding: 18px;
     }
 }
 .btn-cstm-cls{
