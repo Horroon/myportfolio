@@ -15,7 +15,7 @@ const Services = ()=>{
                 <div className="img-detail-tg">
                     <p className="w3-animate-top aim-p">
                         <h2>
-                            <img src={serviceslogo} />
+                            <img src={serviceslogo} alt="services logo" />
                         </h2>
                         <h4>My objective in life is to serve the humanity and help the folks to pick them from the mud and bring them into new era of life by providing IT services in form of software applications</h4>
                     </p>
@@ -30,27 +30,27 @@ const Services = ()=>{
                 <div className="row">
                     {
                         [{
-                            title:"Website development", 
+                            title:"Website development",
                             desc:"I provide single page web applications in react, angularjs or vue. But prefer to work with react.",
                             img:webdev,
                         },{
-                            title:"Cross-plateform mobile apps", 
+                            title:"Cross-plateform mobile apps",
                             desc:"Mobile application in react native(expo, cli) etc. Also work to improve any existing app in react native.",
                             img:mobileapp,
                             },
                             {
-                                title:"Backend Services(Nodejs,Graphql,Prisma)", 
+                                title:"Backend Services(Nodejs,Graphql,Prisma)",
                                 desc:"I like to build backend in nodejs. Rest and Graphql apies with node and graphql-yoga or apollo server with prisma client. I like Graphql backend more than rest.",
                                 img:serverdev,
                             },
                             {
-                                title:"Bugs resolving", 
+                                title:"Bugs resolving",
                                 desc:"I like to resolve bug or add any improvement into any existing project.",
                                 img:bugpic,
-                            }].map(item=><div className="col-lg-4 col-sm-1 w3-animate-bottom" >
+                            }].map(item=><div className="col-lg-4 col-sm-1 w3-animate-bottom" key={item.title}>
                          <div className="card">
-                                <img 
-                                   className="card-img-top" 
+                                <img
+                                   className="card-img-top"
                                    src={item.img} alt="Card image cap" />
                                 <div className="card-body">
                                     <h5 className="card-title">{item.title}</h5>

@@ -1,7 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-export const AboutBody = ({body,Profile, PATHS})=><div className={`col-lg-10 col-sm-12 about-description-side about_body_bg-${body.bgClass}`}>
+interface BodyProps {
+    body: { bgClass: string };
+    Profile: string;
+    PATHS: Array<{ path: string }>;
+}
+
+export const AboutBody = ({body, Profile, PATHS}: BodyProps) => <div className={`col-lg-10 col-sm-12 about-description-side about_body_bg-${body.bgClass}`}>
 <div className="body-personal-info">
     <div className="body-personal-info-desc w3-animate-top">
         <div className="body-personal-info-desc-bio">
@@ -9,7 +15,7 @@ export const AboutBody = ({body,Profile, PATHS})=><div className={`col-lg-10 col
             <h4>Software Engineer</h4>
         </div>
         <div className="body-personal-info-desc-about">
-         <p>I'm a software engineer specialised in frontend development and also work on backend development in node.js for scalable web apps. How can I help you in your project? Checkout my services page and resume.</p> 
+         <p>I'm a software engineer specialised in frontend development and also work on backend development in node.js for scalable web apps. How can I help you in your project? Checkout my services page and resume.</p>
         </div>
         <div className="body-personal-info-desc-btns">
             <div>
@@ -20,7 +26,7 @@ export const AboutBody = ({body,Profile, PATHS})=><div className={`col-lg-10 col
     </div>
     <div className="body-personal-info-profile">
         <div className="body-personal-info-profile-img-parent w3-animate-right">
-            <img src={Profile} />
+            <img src={Profile} alt="profile" />
         </div>
     </div>
 </div>
@@ -33,7 +39,7 @@ export const AboutBody = ({body,Profile, PATHS})=><div className={`col-lg-10 col
         <p>I
              have more than 2 and half year experience building react apps and node.js backend. I also have more than 2 years experience in Graphql and prisma. Below there is a short summary of my skills, you can find out more about that in my resume.
         </p>
-    </div>                
+    </div>
 </div>
 <div className="body-personal-work-mytechs">
     <div className="row">
@@ -60,12 +66,12 @@ export const AboutBody = ({body,Profile, PATHS})=><div className={`col-lg-10 col
                 GitLab helps us collect performance metrics for both servers as well as our applications. It quickly lets us determine the impact of merging a particular branch and keep an eye on our production systems without ever leaving GitLab
                 Circle CI is an amazing tool for continous integration and auto deployment.`,
                 icon:'fab fa-js'
-            
+
             },
             ].map(skill=>{
-            return<div className="col-lg-3 col-sm-1 skill-card w3-animate-bottom" >
+            return<div key={skill.name} className="col-lg-3 col-sm-1 skill-card w3-animate-bottom" >
             <div className="card">
-                    <div><i class={skill.icon} />
+                    <div><i className={skill.icon} />
                     </div>
                    <div className="card-body">
                        <h5 className="card-title">{skill.name}</h5>

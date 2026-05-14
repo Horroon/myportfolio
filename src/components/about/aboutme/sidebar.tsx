@@ -1,7 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 
-export const SideBar = ({sidebar,changeMode, Profile, PATHS})=>{
+interface SideBarProps {
+    sidebar: { bgClass: string };
+    changeMode: (e: React.MouseEvent) => void;
+    Profile: string;
+    PATHS: Array<{ path: string }>;
+}
+
+export const SideBar = ({sidebar, changeMode, Profile, PATHS}: SideBarProps) => {
     return<div className={`col-lg-2 col-sm-12 about-sidenav side-${sidebar.bgClass}`}>
     <div className="about-sidenav-main">
         <div className="personal-info w3-animate-top">
@@ -9,7 +16,7 @@ export const SideBar = ({sidebar,changeMode, Profile, PATHS})=>{
                 <h4>Haroon Rasheed</h4>
             </div>
             <div className="profile-dv">
-                <h4><img src={Profile} /></h4>
+                <h4><img src={Profile} alt="profile" /></h4>
             </div>
             <div className="profile-dv-txt">
                 <h6>Hi, my name is Haroon Rasheed and I'm software engineer. Welcome to my personal website.</h6>
@@ -24,7 +31,7 @@ export const SideBar = ({sidebar,changeMode, Profile, PATHS})=>{
                             {icon:"fa fa-facebook", url:'https://www.facebook.com/haroonrasheed.valient'},
                             {icon:"fa fa-stack-overflow", url:'https://stackoverflow.com/users/7694326/haroon'}
                         ].
-                        map(link=><div><a href={link.url} target="_black"><i className={link.icon} /></a></div>)
+                        map(link=><div key={link.url}><a href={link.url} target="_blank"><i className={link.icon} /></a></div>)
                     }
                 </div>
             </div>
@@ -52,7 +59,7 @@ export const SideBar = ({sidebar,changeMode, Profile, PATHS})=>{
                                     url:PATHS[0].path,
                                     name:'home'
                                 },
-                            ].map((icondiv)=><div><Link to={icondiv.url}><i className={icondiv.icon} /> <span>{icondiv.label}</span></Link></div>)
+                            ].map((icondiv)=><div key={icondiv.name}><Link to={icondiv.url}><i className={icondiv.icon} /> <span>{icondiv.label}</span></Link></div>)
                         }
                     </div>
                 </div>
@@ -63,9 +70,9 @@ export const SideBar = ({sidebar,changeMode, Profile, PATHS})=>{
             <div>
                 <h6><i className="fa fa-info-circle" /> <span>Dark mode</span></h6>
                 <div>
-                <label class="switch">
+                <label className="switch">
                     <input type="checkbox" />
-                    <span class="slider round"  onClick={changeMode}></span>
+                    <span className="slider round"  onClick={changeMode}></span>
                 </label>
                 </div>
             </div>

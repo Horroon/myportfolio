@@ -2,9 +2,19 @@ import React, { useReducer } from "react";
 import {ScrollController} from '../../utilities-methods/index';
 import './style.scss'
 
-const InitialState= { fname: '', lname: '', email: '', message: '', error:"" }
+interface ContactState {
+    fname: string;
+    lname: string;
+    email: string;
+    message: string;
+    error: string;
+}
 
-const reducer = (state = InitialState, action) => {
+type ContactAction = { type: 'fname' | 'lname' | 'email' | 'message' | 'error'; payload: string };
+
+const InitialState: ContactState = { fname: '', lname: '', email: '', message: '', error:"" }
+
+const reducer = (state: ContactState = InitialState, action: ContactAction): ContactState => {
     switch (action.type) {
         case "fname":
             return { ...state, fname: action.payload }
@@ -41,7 +51,7 @@ export const Contact = () => {
                             {name:"Address", detail:"Satellite Town 6th Road, Rawalpindi.", icon:"fa fa-map-marker"},
                             {name:"Phone", detail:"###########", icon:"fa fa-phone"},
                             {name:"Email", detail:"horroona@gmail.com", icon:"fa fa-envelope"}
-                        ].map(item=> (<div className="location-hd">
+                        ].map(item=> (<div className="location-hd" key={item.name}>
                                         <h4>
                                             <i className={item.icon} />
                                         </h4>
@@ -60,27 +70,27 @@ export const Contact = () => {
                             <div>
                                 <h3>Send Message</h3>
                             </div>
-                            <div class="form-group row">
-                                <div class="col-sm-12 input-col">
-                                 <input type="text" class="form-control" id="staticEmail" placeholder="Full Name" />
+                            <div className="form-group row">
+                                <div className="col-sm-12 input-col">
+                                 <input type="text" className="form-control" id="staticEmail" placeholder="Full Name" />
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <div class="col-sm-12 input-col">
-                                    <input type="email" class="form-control" id="inputPassword" placeholder="Email" />
+                            <div className="form-group row">
+                                <div className="col-sm-12 input-col">
+                                    <input type="email" className="form-control" id="inputPassword" placeholder="Email" />
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <div class="col-sm-12 input-col">
-                                    <textarea type="textarea" rows="3" class="form-control" id="inputPassword" placeholder="Type message..." />
+                            <div className="form-group row">
+                                <div className="col-sm-12 input-col">
+                                    <textarea rows={3} className="form-control" id="inputPassword2" placeholder="Type message..." />
                                 </div>
-                            </div>    
-                            <div class="row">
+                            </div>
+                            <div className="row">
                                 <div className="col-lg-12 mx-auto text-center error-class">
                                     <p>{State.error && State.error}</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div className="row">
                                 <button className="btn btn-md btn-outline-success" onClick={()=>setState({type:"error",payload: "You will be able to send messages soon."})}>Send message</button>
                             </div>
                       </div>
