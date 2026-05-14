@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "agent",
+            "if": "Bash(git commit*)",
+            "prompt": "You are a code review subagent. The user is about to run a git commit. Review the staged changes before the commit proceeds.\n\n1. Run `git diff --cached` to see all staged changes.\n2. Review for: bugs, security vulnerabilities, unused imports, obvious logic errors, and missing error handling.\n3. If you find CRITICAL issues (bugs, security holes), respond with JSON: {\"decision\": \"block\", \"reason\": \"<concise summary of critical issues found>\"}\n4. If only minor warnings exist, respond with JSON: {\"hookSpecificOutput\": {\"hookEventName\": \"PreToolUse\", \"permissionDecision\": \"allow\", \"additionalContext\": \"Code review warnings: <bullet list of issues>\"}}\n5. If the code looks clean, respond with JSON: {\"hookSpecificOutput\": {\"hookEventName\": \"PreToolUse\", \"permissionDecision\": \"allow\", \"additionalContext\": \"Code review passed — no issues found.\"}}",
+            "timeout": 90,
+            "statusMessage": "Code review subagent reviewing staged changes..."
+          }
+        ]
+      }
+    ]
+  }
+}
