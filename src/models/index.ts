@@ -6,12 +6,7 @@ import {headerInformation} from './header';
 import {aboutMe} from './about';
 import {mode} from './mode';
 
-const logger = (_: any) => {
-    // if (process.env.NODE_ENV === 'production') {
-    //     return LogRocket.reduxMiddleware();
-    // }
-    return createLogger({ collapsed: (getState: any, action: any, logEntry: any) => !logEntry.error });
-};
+const logger = createLogger({ collapsed: (getState: any, action: any, logEntry: any) => !logEntry.error });
 
 export const store: any = init({
     models: {
@@ -23,7 +18,7 @@ export const store: any = init({
     },
     redux: {
         middlewares: [
-            ...(process.env.NODE_ENV == "development" ? [logger()] : []),//benchmarkingMiddleWare
+            ...(process.env.NODE_ENV == "development" ? [logger] : []),//benchmarkingMiddleWare
         ],
         rootReducers: { RESET: (_: any) => undefined },
         devtoolOptions: {
