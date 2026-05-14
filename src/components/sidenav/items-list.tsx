@@ -74,6 +74,7 @@ function SideNavItems(props: any){
     const {location:{pathname}} = props;
     const currentPath = pathname === '/'?'/home':pathname
     return LIST.map(item=> <Link
+            key={item.path}
             to={item.path==='/home'?'/':item.path}
             className={ currentPath.includes(item.path)?"selectedItemrightborder":'norightborder'}
         >

@@ -68,10 +68,11 @@ interface SchemaParserProps {
      if(schemas.length){
        return <>
         {
-          schemas.map((currentSchema: any) => <SchemaParser schema={currentSchema} />)
+          schemas.map((currentSchema: any, i: number) => <SchemaParser schema={currentSchema} key={i} />)
         }
        </>
      }
+     if (!Screen) return null;
      return <Screen />
  }
 export default SchemaParser
