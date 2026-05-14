@@ -31,7 +31,7 @@ export const SideBar = ({sidebar, changeMode, Profile, PATHS}: SideBarProps) => 
                             {icon:"fa fa-facebook", url:'https://www.facebook.com/haroonrasheed.valient'},
                             {icon:"fa fa-stack-overflow", url:'https://stackoverflow.com/users/7694326/haroon'}
                         ].
-                        map(link=><div key={link.url}><a href={link.url} target="_black"><i className={link.icon} /></a></div>)
+                        map(link=><div key={link.url}><a href={link.url} target="_blank"><i className={link.icon} /></a></div>)
                     }
                 </div>
             </div>

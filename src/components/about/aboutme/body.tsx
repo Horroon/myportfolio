@@ -69,7 +69,7 @@ export const AboutBody = ({body, Profile, PATHS}: BodyProps) => <div className={
 
             },
             ].map(skill=>{
-            return<div className="col-lg-3 col-sm-1 skill-card w3-animate-bottom" >
+            return<div key={skill.name} className="col-lg-3 col-sm-1 skill-card w3-animate-bottom" >
             <div className="card">
                     <div><i className={skill.icon} />
                     </div>
