@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import {
     Home,
     Favourite,
@@ -27,8 +27,13 @@ import {
     Projects
 } from '../components/index';
 
- const SchemaParser = ({schema={}, schemas=[]})=>{
-    const components = {
+interface SchemaParserProps {
+    schema?: any;
+    schemas?: any[];
+}
+
+ const SchemaParser = ({schema={}, schemas=[]}: SchemaParserProps) => {
+    const components: Record<string, (_: any) => JSX.Element> = {
         HOME: _=><Home {...schema} />,
         FAVOURITE:_=><Favourite />,
         PROFILE:_=><MainProfile {...schema} />,
@@ -55,7 +60,7 @@ import {
         PHOTO: _=> <Photo {...schema} />,
         CONTAINER:_=> <Container {...schema}>
             {
-                schema.items.map((item,i)=> <SchemaParser schema={item} key={schema.component + i} />)
+                schema.items.map((item: any, i: number)=> <SchemaParser schema={item} key={schema.component + i} />)
             }
         </Container>
     }
@@ -63,10 +68,10 @@ import {
      if(schemas.length){
        return <>
         {
-          schemas.map(currentSchema=><SchemaParser schema={currentSchema} />)
+          schemas.map((currentSchema: any) => <SchemaParser schema={currentSchema} />)
         }
        </>
      }
      return <Screen />
  }
-export default SchemaParser 
+export default SchemaParser

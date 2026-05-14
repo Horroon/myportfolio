@@ -128,7 +128,7 @@ export const Events = {
     patientInfo: 'Consent Forms',
     intakeForms: 'Intake Forms',
   };
-  export const DayOfWeekMap = {
+  export const DayOfWeekMap: Record<number, string> = {
     1: 'Monday',
     2: 'Tuesday',
     3: 'Wednesday',

@@ -1,7 +1,14 @@
 import React from 'react';
-import {Link,withRouter} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 
-const LIST = [
+interface NavItem {
+    name: string;
+    path: string;
+    label: string;
+    icon: string;
+}
+
+const LIST: NavItem[] = [
     {
         name:"Home",
         path:"/home",
@@ -32,7 +39,7 @@ const LIST = [
         label:"Gallery",
         icon: "fa fa-file-image-o"
     },
-    
+
     {
         name:"Books",
         path:"/favoritebook",
@@ -63,11 +70,11 @@ const LIST = [
     },
 ]
 
-function SideNavItems(props){
+function SideNavItems(props: any){
     const {location:{pathname}} = props;
     const currentPath = pathname === '/'?'/home':pathname
-    return LIST.map(item=> <Link 
-            to={item.path==='/home'?'/':item.path} 
+    return LIST.map(item=> <Link
+            to={item.path==='/home'?'/':item.path}
             className={ currentPath.includes(item.path)?"selectedItemrightborder":'norightborder'}
         >
        <div> <i className={item.icon} /><a href="#">{item.label}</a></div>

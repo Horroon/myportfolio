@@ -3,7 +3,15 @@ import Items from "./items-list";
 import "./style.scss";
 import Profile from "../../assets/p-site-logo.png";
 
-export const SideNav = ({ props: { isOpen, component, store } }) => {
+interface SideNavProps {
+    props: {
+        isOpen: boolean;
+        component: { path: string };
+        store: any;
+    };
+}
+
+export const SideNav = ({ props: { isOpen, component, store } }: SideNavProps) => {
   return (
     <div
       id="mySidenav"

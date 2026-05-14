@@ -2,10 +2,21 @@ import React from 'react';
 import GiveColumn from './itemColumn'
 import './style.scss'
 
+interface FooterItem {
+    iconClass: string;
+    title: string;
+    desc: string;
+}
 
+interface FooterProps {
+    Items: FooterItem[];
+    owner: {
+        year: string;
+        name: string;
+    };
+}
 
-
-export const Footer = (props) => {
+export const Footer = (props: FooterProps) => {
    const {Items, owner:{year,name}} = props
     return <footer className="page-footer font-small dark pt-4 ftr-cstm-style">
         <div className="row ftr-rw-1">

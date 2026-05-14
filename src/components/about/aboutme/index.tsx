@@ -9,10 +9,10 @@ import {SideBar} from './sidebar';
 import {AboutBody} from './body';
 import {PATHS} from '../../paths';
 
-export const AboutMe = (props) => {
+export const AboutMe = (props: any) => {
 
     const {sidebar,body} = props.aboutMe
-    const changeMode = (e)=>{
+    const changeMode = (e: React.MouseEvent) => {
         e.stopPropagation();
         const nextMode = sidebar.bgClass == CommonProperties.modes.dark ? CommonProperties.modes.white : CommonProperties.modes.dark
         store.dispatch.aboutMe.updateAboutMe({ sidebar: {...sidebar, bgClass: nextMode}, body:{...body, bgClass: nextMode}})
@@ -30,5 +30,5 @@ export const AboutMe = (props) => {
     </div>
 }
 
-const mapStateToProps = (state=>state);
+const mapStateToProps = (state: any) => state;
 export default connect(mapStateToProps)(AboutMe)

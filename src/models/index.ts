@@ -1,20 +1,19 @@
 import { init } from '@rematch/core';
 import { createLogger } from 'redux-logger';
-import { LogRocket } from "logrocket";
 import { loginInformation } from './login';
 import {SideNav} from './sideNav';
 import {headerInformation} from './header';
 import {aboutMe} from './about';
 import {mode} from './mode';
 
-const logger = _ => {
+const logger = (_: any) => {
     // if (process.env.NODE_ENV === 'production') {
     //     return LogRocket.reduxMiddleware();
     // }
-    return createLogger({ collapsed: (getState, action, logEntry) => !logEntry.error });
+    return createLogger({ collapsed: (getState: any, action: any, logEntry: any) => !logEntry.error });
 };
 
-export const store = init({
+export const store: any = init({
     models: {
         loginInformation,
         SideNav,
@@ -26,7 +25,7 @@ export const store = init({
         middlewares: [
             ...(process.env.NODE_ENV == "development" ? [logger()] : []),//benchmarkingMiddleWare
         ],
-        rootReducers: { RESET: _ => undefined },
+        rootReducers: { RESET: (_: any) => undefined },
         devtoolOptions: {
             trace: true,
             traceLimit: 25,

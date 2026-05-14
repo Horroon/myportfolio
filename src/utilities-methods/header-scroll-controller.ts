@@ -2,7 +2,7 @@ import {useEffect} from 'react';
 import { HeaderClasses } from '../constants/headers-classes';
 import {store} from '../models/index';
 
-const handleHeaderWithScroll = (store)=>{
+const handleHeaderWithScroll = (store: any) => {
     if(document.documentElement.scrollTop > 100){
         store.dispatch.headerInformation.updateheaderclasses({headerclasses: HeaderClasses.coloredHeader})
     }else{

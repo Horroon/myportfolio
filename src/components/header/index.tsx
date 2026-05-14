@@ -7,8 +7,25 @@ import './style.scss';
 
 import {SideNav as OverLay} from '../sidenav';
 
-export const Header = (props) => {
-    
+interface UiComponent {
+    text: string;
+    link: string;
+}
+
+interface HeaderProps {
+    news: string;
+    uicomponents: UiComponent[];
+    SideNav: {
+        isOpen: boolean;
+        component: { path: string };
+    };
+    headerInformation: {
+        headerclasses: string;
+    };
+}
+
+export const Header = (props: HeaderProps) => {
+
     const {news, uicomponents,SideNav:{isOpen, component}, headerInformation:{headerclasses} } = props
     //const {isOpen} = sidenav
     return <nav className={`navbar navbar-expand-lg navbar-dark ${headerclasses}`}>
@@ -17,7 +34,7 @@ export const Header = (props) => {
             <div className="nv-brnd-dv">
                 <Link className="navbar-brand brnd-txt-size uppercase" onClick={()=>{
                      store.dispatch.SideNav.open({isOpen: true})
-                    }} ><img src={logo} className="hdr-lgo" /> Information Technology</Link>
+                    }} to="/"><img src={logo} className="hdr-lgo" alt="logo" /> Information Technology</Link>
             </div>
             {/* <div className="marq-parent-dv" dangerouslySetInnerHTML={{__html:`<marquee class="marqueeStyle uppercase">${news}</marquee>`}}></div> */}
             <div className="nv-uitm-dv">
@@ -34,5 +51,5 @@ export const Header = (props) => {
         </div>
     </nav>
 }
-const mapStateToProps = ((state)=>state)
+const mapStateToProps = ((state: any) => state)
 export default connect(mapStateToProps)(Header)

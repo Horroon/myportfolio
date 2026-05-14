@@ -9,7 +9,7 @@ export const aboutMe = {
         }
     },
     reducers: {
-        updateAboutMe: (state, payload) => ({ ...state, ...payload }),
-        resetAboutMe: (state, payload) => ({ ...state, ...payload })
+        updateAboutMe: (state: any, payload: any) => ({ ...state, ...payload }),
+        resetAboutMe: (state: any, payload: any) => ({ ...state, ...payload })
     }
 };
