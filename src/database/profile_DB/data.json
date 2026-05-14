@@ -9,7 +9,7 @@
                     "component":"PICTURESECTION",
                     "ProfileImage": "/assets/acct.webp", 
                     "heading": "Haroon Rasheed / Developer For React Technologies", 
-                    "description": "I am a 24 year old software engineer with 2 year in house experience as FrontEnd Developer with working experience on backend as Node.js developer. I have developed Single Page Applications from scratch as well worked with medium level teams for a range of clients. For my side projects I have worked with React Native, Angular and Vanilla JS . I am currently working with MTBC Islamabad. I feel excited to work with fast paced progressive teams achieving something great. " 
+                    "description": "I am a 24 year old software engineer with 6 year in house experience as FrontEnd Developer with working experience on backend as Node.js developer. I have developed Single Page Applications from scratch as well worked with medium level teams for a range of clients. For my side projects I have worked with React Native, Angular and Vanilla JS . I am currently working with Intech Process Automation Lahore. I feel excited to work with fast paced progressive teams achieving something great. " 
                 }
             ]
         },
@@ -84,7 +84,7 @@
                             "background":[
                                 { 
                                     "head": { "c1": "Position", "c2": "Experience" }, 
-                                    "value": { "c1": "Software Engineer", "c2": "3 years" } 
+                                    "value": { "c1": "Software Engineer", "c2": "6 years" } 
                                 },
                                 { 
                                     "head": { "c1": "Nationality", "c2": "Website" }, 
