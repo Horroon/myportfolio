@@ -13,7 +13,7 @@ const handleHeaderWithScroll = (store: any) => {
 function ScrollController(){
     const keepEyeOnScroll = ()=> handleHeaderWithScroll(store)
     useEffect(()=>{
-        keepEyeOnScroll(store)
+        keepEyeOnScroll()
         window.addEventListener('scroll',keepEyeOnScroll)
        return ()=>window.removeEventListener('scroll', keepEyeOnScroll)
     },[]);
