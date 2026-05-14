@@ -51,10 +51,9 @@ export const Contact = () => {
                 process.env.REACT_APP_EMAILJS_SERVICE_ID!,
                 process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
                 {
-                    from_name:    state.name,
-                    from_email:   state.email,
-                    message:      state.message,
-                    to_email:     process.env.REACT_APP_CONTACT_EMAIL!,
+                    from_name:  state.name,
+                    from_email: state.email,
+                    message:    state.message,
                 },
                 process.env.REACT_APP_EMAILJS_PUBLIC_KEY!
             )
