@@ -70,16 +70,16 @@ const LIST: NavItem[] = [
     },
 ]
 
-function SideNavItems(props: any){
+function SideNavItems(props: any): JSX.Element {
     const {location:{pathname}} = props;
     const currentPath = pathname === '/'?'/home':pathname
-    return LIST.map(item=> <Link
+    return <>{LIST.map(item=> <Link
             key={item.path}
             to={item.path==='/home'?'/':item.path}
             className={ currentPath.includes(item.path)?"selectedItemrightborder":'norightborder'}
         >
        <div> <i className={item.icon} /><a href="#">{item.label}</a></div>
-    </Link>)
+    </Link>)}</>
 }
 
 export default withRouter(SideNavItems)
